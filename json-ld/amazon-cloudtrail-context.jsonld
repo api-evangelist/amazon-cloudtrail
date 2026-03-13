@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "cloudtrail": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Trail": {
+      "@id": "cloudtrail:Trail",
+      "@context": {
+        "name": "schema:name",
+        "trailARN": "cloudtrail:trailARN",
+        "s3BucketName": "cloudtrail:s3BucketName",
+        "homeRegion": "cloudtrail:homeRegion",
+        "isMultiRegionTrail": {
+          "@id": "cloudtrail:isMultiRegionTrail",
+          "@type": "xsd:boolean"
+        },
+        "logFileValidationEnabled": {
+          "@id": "cloudtrail:logFileValidationEnabled",
+          "@type": "xsd:boolean"
+        }
+      }
+    },
+
+    "Event": {
+      "@id": "cloudtrail:Event",
+      "@context": {
+        "eventId": "cloudtrail:eventId",
+        "eventName": "schema:name",
+        "eventSource": "cloudtrail:eventSource",
+        "eventTime": {
+          "@id": "dcterms:date",
+          "@type": "xsd:dateTime"
+        },
+        "username": "cloudtrail:username",
+        "readOnly": {
+          "@id": "cloudtrail:readOnly",
+          "@type": "xsd:boolean"
+        }
+      }
+    },
+
+    "EventDataStore": {
+      "@id": "cloudtrail:EventDataStore",
+      "@context": {
+        "eventDataStoreArn": "cloudtrail:eventDataStoreArn",
+        "name": "schema:name",
+        "status": "cloudtrail:status",
+        "retentionPeriod": {
+          "@id": "cloudtrail:retentionPeriod",
+          "@type": "xsd:integer"
+        },
+        "createdTimestamp": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}
