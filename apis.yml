@@ -1,9 +1,16 @@
+aid: amazon-cloudtrail
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/apis.yml
 name: Amazon CloudTrail API
-description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account by recording API calls and delivering log files containing API activity for your account.
-image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-url: https://aws.amazon.com/cloudtrail/
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+specificationVersion: '0.19'
+description: >-
+  AWS CloudTrail is a service that enables governance, compliance, operational
+  auditing, and risk auditing of your AWS account by recording API calls and
+  delivering log files containing API activity for your account.
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 apis:
 - name: Amazon CloudTrail API
   description: >-
