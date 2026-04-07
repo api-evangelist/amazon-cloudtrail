@@ -32,7 +32,7 @@ paths:
   /trails:
     post:
       operationId: CreateTrail
-      summary: Create a trail
+      summary: Amazon CloudTrail Create a trail
       description: >-
         Creates a trail that specifies the settings for delivery of log data to
         an Amazon S3 bucket.
@@ -71,7 +71,7 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
     get:
       operationId: DescribeTrails
-      summary: Describe trails
+      summary: Amazon CloudTrail Describe trails
       description: >-
         Retrieves settings for one or more trails associated with the current
         region for your account.
@@ -113,7 +113,7 @@ paths:
   /trails/{trailName}:
     delete:
       operationId: DeleteTrail
-      summary: Delete a trail
+      summary: Amazon CloudTrail Delete a trail
       description: >-
         Deletes a trail. This operation must be called from the region in which
         the trail was created.
@@ -151,7 +151,7 @@ paths:
   /events/lookup:
     post:
       operationId: LookupEvents
-      summary: Look up events
+      summary: Amazon CloudTrail Look up events
       description: >-
         Looks up management events or CloudTrail Insights events captured by
         CloudTrail. You can look up events that occurred in a region within
@@ -187,7 +187,7 @@ paths:
   /event-data-stores:
     post:
       operationId: CreateEventDataStore
-      summary: Create an event data store
+      summary: Amazon CloudTrail Create an event data store
       description: >-
         Creates a new event data store for CloudTrail Lake, which lets you
         run SQL-based queries on your CloudTrail events.
@@ -220,7 +220,7 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
     get:
       operationId: ListEventDataStores
-      summary: List event data stores
+      summary: Amazon CloudTrail List event data stores
       description: >-
         Returns information about all event data stores in the account.
       tags:
