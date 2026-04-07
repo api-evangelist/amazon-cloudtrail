@@ -22,12 +22,12 @@ servers:
         default: us-east-1
         description: AWS Region
 tags:
-  - name: Trails
-    description: Operations for creating and managing CloudTrail trails
-  - name: Events
-    description: Operations for looking up and querying events
   - name: Event Data Stores
     description: Operations for managing CloudTrail Lake event data stores
+  - name: Events
+    description: Operations for looking up and querying events
+  - name: Trails
+    description: Operations for creating and managing CloudTrail trails
 paths:
   /trails:
     post:
