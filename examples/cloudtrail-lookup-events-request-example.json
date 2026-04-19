@@ -1,0 +1,12 @@
+{
+  "LookupAttributes": [
+    {
+      "AttributeKey": "EventId",
+      "AttributeValue": "example-value"
+    }
+  ],
+  "StartTime": "2025-03-15T14:30:00Z",
+  "EndTime": "2025-03-15T14:30:00Z",
+  "MaxResults": 100,
+  "NextToken": "example-value"
+}

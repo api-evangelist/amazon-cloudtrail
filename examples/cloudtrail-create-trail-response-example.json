@@ -1,0 +1,7 @@
+{
+  "Name": "example-resource",
+  "S3BucketName": "example-resource",
+  "TrailARN": "arn:aws:::example/abc12345",
+  "IsMultiRegionTrail": true,
+  "LogFileValidationEnabled": true
+}

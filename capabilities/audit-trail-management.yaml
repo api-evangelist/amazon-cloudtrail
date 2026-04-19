@@ -1,0 +1,36 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: "Amazon CloudTrail Audit Trail Management"
+  description: "Workflow for audit trail management using Amazon CloudTrail for Security Analyst personas."
+  tags:
+    - Amazon Web Services
+    - Amazon CloudTrail
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: cloudtrail
+      location: ./shared/cloudtrail.yaml
+
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: cloudtrail-workflow-api
+      description: "Unified REST API for Amazon CloudTrail audit trail management."
+      resources: []
+
+    - type: mcp
+      port: 9090
+      namespace: cloudtrail-workflow-mcp
+      transport: http
+      description: "MCP server for AI-assisted Amazon CloudTrail audit trail management."
+      tools: []

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-schema/cloudtrail-lookup-events-request-schema.json",
+  "title": "LookupEventsRequest",
+  "description": "LookupEventsRequest schema",
+  "type": "object",
+  "properties": {
+    "LookupAttributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "AttributeKey": {
+            "type": "string",
+            "enum": [
+              "EventId",
+              "EventName",
+              "ReadOnly",
+              "Username",
+              "ResourceType",
+              "ResourceName",
+              "EventSource",
+              "AccessKeyId"
+            ]
+          },
+          "AttributeValue": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "StartTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "EndTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "MaxResults": {
+      "type": "integer"
+    },
+    "NextToken": {
+      "type": "string"
+    }
+  }
+}

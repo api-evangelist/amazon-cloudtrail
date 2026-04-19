@@ -1,0 +1,9 @@
+{
+  "Name": "example-resource",
+  "S3BucketName": "example-resource",
+  "S3KeyPrefix": "example-value",
+  "IsMultiRegionTrail": true,
+  "EnableLogFileValidation": true,
+  "CloudWatchLogsLogGroupArn": "arn:aws:::example/abc12345",
+  "CloudWatchLogsRoleArn": "arn:aws:::example/abc12345"
+}

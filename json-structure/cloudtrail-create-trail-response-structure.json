@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-structure/cloudtrail-create-trail-response-structure.json",
+  "name": "CreateTrailResponse",
+  "description": "CreateTrailResponse schema",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "S3BucketName": {
+      "type": "string"
+    },
+    "TrailARN": {
+      "type": "string"
+    },
+    "IsMultiRegionTrail": {
+      "type": "boolean"
+    },
+    "LogFileValidationEnabled": {
+      "type": "boolean"
+    }
+  }
+}

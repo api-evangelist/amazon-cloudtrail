@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-schema/cloudtrail-create-event-data-store-request-schema.json",
+  "title": "CreateEventDataStoreRequest",
+  "description": "CreateEventDataStoreRequest schema",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "The name of the event data store."
+    },
+    "RetentionPeriod": {
+      "type": "integer",
+      "description": "Retention period in days."
+    },
+    "MultiRegionEnabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "Name"
+  ]
+}

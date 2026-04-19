@@ -1,0 +1,14 @@
+{
+  "Events": [
+    {
+      "EventId": "abc12345",
+      "EventName": "example-resource",
+      "EventTime": "2025-03-15T14:30:00Z",
+      "EventSource": "example-value",
+      "Username": "example-resource",
+      "CloudTrailEvent": "example-value",
+      "ReadOnly": "example-value"
+    }
+  ],
+  "NextToken": "example-value"
+}

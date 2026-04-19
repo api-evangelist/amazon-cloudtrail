@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-schema/cloudtrail-describe-trails-response-schema.json",
+  "title": "DescribeTrailsResponse",
+  "description": "DescribeTrailsResponse schema",
+  "type": "object",
+  "properties": {
+    "trailList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "S3BucketName": {
+            "type": "string"
+          },
+          "TrailARN": {
+            "type": "string"
+          },
+          "HomeRegion": {
+            "type": "string"
+          },
+          "IsMultiRegionTrail": {
+            "type": "boolean"
+          },
+          "LogFileValidationEnabled": {
+            "type": "boolean"
+          },
+          "HasCustomEventSelectors": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

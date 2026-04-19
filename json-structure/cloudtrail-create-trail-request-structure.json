@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-structure/cloudtrail-create-trail-request-structure.json",
+  "name": "CreateTrailRequest",
+  "description": "CreateTrailRequest schema",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "The name of the trail."
+    },
+    "S3BucketName": {
+      "type": "string",
+      "description": "The name of the S3 bucket for log file delivery."
+    },
+    "S3KeyPrefix": {
+      "type": "string",
+      "description": "The S3 key prefix for log file delivery."
+    },
+    "IsMultiRegionTrail": {
+      "type": "boolean",
+      "description": "Whether the trail is created in all regions."
+    },
+    "EnableLogFileValidation": {
+      "type": "boolean",
+      "description": "Whether log file integrity validation is enabled."
+    },
+    "CloudWatchLogsLogGroupArn": {
+      "type": "string",
+      "description": "The ARN of the CloudWatch Logs log group."
+    },
+    "CloudWatchLogsRoleArn": {
+      "type": "string",
+      "description": "The role ARN for CloudWatch Logs delivery."
+    }
+  },
+  "required": [
+    "Name",
+    "S3BucketName"
+  ]
+}

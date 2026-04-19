@@ -1,0 +1,11 @@
+{
+  "EventDataStores": [
+    {
+      "EventDataStoreArn": "arn:aws:::example/abc12345",
+      "Name": "example-resource",
+      "Status": "ACTIVE",
+      "RetentionPeriod": 100
+    }
+  ],
+  "NextToken": "example-value"
+}

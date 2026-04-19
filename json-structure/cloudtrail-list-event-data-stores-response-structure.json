@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-structure/cloudtrail-list-event-data-stores-response-structure.json",
+  "name": "ListEventDataStoresResponse",
+  "description": "ListEventDataStoresResponse schema",
+  "type": "object",
+  "properties": {
+    "EventDataStores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "EventDataStoreArn": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Status": {
+            "type": "string"
+          },
+          "RetentionPeriod": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "NextToken": {
+      "type": "string"
+    }
+  }
+}

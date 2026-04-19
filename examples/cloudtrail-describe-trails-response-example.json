@@ -1,0 +1,13 @@
+{
+  "trailList": [
+    {
+      "Name": "example-resource",
+      "S3BucketName": "example-resource",
+      "TrailARN": "arn:aws:::example/abc12345",
+      "HomeRegion": "example-value",
+      "IsMultiRegionTrail": true,
+      "LogFileValidationEnabled": true,
+      "HasCustomEventSelectors": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/json-structure/cloudtrail-lookup-events-request-structure.json",
+  "name": "LookupEventsRequest",
+  "description": "LookupEventsRequest schema",
+  "type": "object",
+  "properties": {
+    "LookupAttributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "AttributeKey": {
+            "type": "string",
+            "enum": [
+              "EventId",
+              "EventName",
+              "ReadOnly",
+              "Username",
+              "ResourceType",
+              "ResourceName",
+              "EventSource",
+              "AccessKeyId"
+            ]
+          },
+          "AttributeValue": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "StartTime": {
+      "type": "datetime"
+    },
+    "EndTime": {
+      "type": "datetime"
+    },
+    "MaxResults": {
+      "type": "int32"
+    },
+    "NextToken": {
+      "type": "string"
+    }
+  }
+}

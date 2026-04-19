@@ -1,0 +1,7 @@
+{
+  "EventDataStoreArn": "arn:aws:::example/abc12345",
+  "Name": "example-resource",
+  "Status": "ACTIVE",
+  "RetentionPeriod": 100,
+  "CreatedTimestamp": "2025-03-15T14:30:00Z"
+}

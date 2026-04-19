@@ -1,0 +1,5 @@
+{
+  "Name": "example-resource",
+  "RetentionPeriod": 100,
+  "MultiRegionEnabled": true
+}
