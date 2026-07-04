@@ -1,0 +1,30 @@
+generated: '2026-06-20'
+method: searched
+status: published
+source: https://awslabs.github.io/mcp/servers/cloudtrail-mcp-server
+server:
+  name: awslabs.cloudtrail-mcp-server
+  transport: stdio
+  package: awslabs.cloudtrail-mcp-server
+  registry: pypi
+  install: uvx awslabs.cloudtrail-mcp-server@latest
+  repository: https://github.com/awslabs/mcp/tree/main/src/cloudtrail-mcp-server
+  announced: '2025-09'
+  announcement: https://aws.amazon.com/about-aws/whats-new/2025/09/aws-cloudtrail-mcp-server-enhanced-security-analysis/
+  note: >-
+    Official AWS Labs open-source MCP server for CloudTrail. Runs locally on the
+    same host as the LLM client (stdio); no hosted/remote endpoint. Requires an
+    AWS account with CloudTrail enabled; CloudTrail Lake required for SQL queries.
+tools:
+  - name: lookup_events
+    description: Look up CloudTrail management/Insights events from the last 90 days by criteria such as username, event name, or resource name, with pagination.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#LookupEvents
+  - name: lake_query
+    description: Execute Trino-compatible SQL queries against CloudTrail Lake event data stores for advanced analytics.
+  - name: list_event_data_stores
+    description: List available CloudTrail Lake event data stores with their capabilities and event selectors.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#ListEventDataStores
+  - name: get_query_status
+    description: Get the status of a CloudTrail Lake query.
+  - name: get_query_results
+    description: Get the results of a completed CloudTrail Lake query, with pagination for large result sets.

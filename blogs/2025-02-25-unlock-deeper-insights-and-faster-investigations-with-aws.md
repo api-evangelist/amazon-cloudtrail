@@ -1,0 +1,8 @@
+---
+title: "Unlock deeper insights and faster investigations with AWS CloudTrail Lake"
+url: "https://aws.amazon.com/blogs/mt/unlock-deeper-insights-and-faster-investigations-with-aws-cloudtrail-lake/"
+date: "2025-02-25"
+author: "Darpa Sehgal"
+feed_url: "https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/"
+---
+AWS recently introduced several new enhancements to AWS CloudTrail Lake, a managed data lake that helps customers capture, immutably store, access, and analyze their AWS and non-AWS activity logs, as well as AWS Config configuration items. These latest updates provide you with powerful new tools to streamline analysis, uncover anomalies, and accelerate investigations of your data stored within your event data stores. The enhancements include: New enhanced filtering options for CloudTrail events ingested into event data stores AI-powered natural language query generation AI-powered query result summarization (preview) Cross-account sharing of event data stores Additional comprehensive dashboard capabilities, including: A new dashboard that provides an overview of your AWS activity logs captured within your event data stores, with AI-powered insights (the AI-powered insights feature is currently in preview) A suite of 14 pre-curated dashboards for different use cases such as security, compliance, and operational monitoring The ability to create your own custom dashboards with scheduled refreshes Enhanced event filtering AWS CloudTrail Lake is enhancing its event filtering capabilities, giving you greater control over which CloudTrail events are ingested into your event data stores.

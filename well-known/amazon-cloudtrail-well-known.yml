@@ -1,0 +1,19 @@
+generated: '2026-06-20'
+method: searched
+source: https://aws.amazon.com/.well-known/security.txt
+hosts:
+  - host: https://aws.amazon.com
+    documents:
+      - path: /.well-known/security.txt          # RFC 9116
+        status: 200
+        file: amazon-cloudtrail-security.txt
+      - path: /.well-known/openid-configuration
+        status: 301
+      - path: /.well-known/ai-plugin.json
+        status: 301
+  - host: https://cloudtrail.us-east-1.amazonaws.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/oauth-authorization-server  # RFC 8414
+        status: 404

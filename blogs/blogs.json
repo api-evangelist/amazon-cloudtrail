@@ -1,0 +1,6 @@
+{
+  "repo": "amazon-cloudtrail",
+  "feeds": [ { "source": "https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/", "feed_url": "https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/", "title": "AWS CloudTrail – AWS Cloud Operations Blog", "saved": 20 } ],
+  "fetched": "2026-07-04T13:39:37Z",
+  "post_count": 20
+}

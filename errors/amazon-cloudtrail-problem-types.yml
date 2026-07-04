@@ -1,0 +1,38 @@
+generated: '2026-06-20'
+method: derived
+format: aws-json
+source: openapi/amazon-cloudtrail-openapi.yml, https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/CommonErrors.html
+note: >-
+  CloudTrail returns AWS-style JSON errors with a message field and an
+  x-amzn-ErrorType response header, not RFC 9457 application/problem+json.
+problems:
+  - status: 400
+    type: InvalidTrailNameException
+    title: Invalid trail name
+    remediation: Trail names must be 3-128 chars, start with a letter, and use only letters, numbers, periods, underscores, or dashes.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#CreateTrail
+  - status: 409
+    type: TrailAlreadyExistsException
+    title: Trail already exists
+    remediation: Choose a unique trail name or update the existing trail.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#CreateTrail
+  - status: 404
+    type: TrailNotFoundException
+    title: Trail not found
+    remediation: Verify the trail name or ARN and that you are calling from the trail's home Region.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#DeleteTrail
+  - status: 400
+    type: InvalidLookupAttributesException
+    title: Invalid lookup attributes
+    remediation: Use a supported AttributeKey (EventId, EventName, ReadOnly, Username, ResourceType, ResourceName, EventSource, AccessKeyId).
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#LookupEvents
+  - status: 400
+    type: InvalidParameterException
+    title: Invalid parameter
+    remediation: Check request parameters against the API Reference constraints.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#CreateEventDataStore
+  - status: 500
+    type: OperationNotPermittedException
+    title: Operation not permitted / internal error
+    remediation: The operation is not permitted in this context or an internal error occurred; retry with backoff.
+    source_operation: openapi/amazon-cloudtrail-openapi.yml#CreateTrail

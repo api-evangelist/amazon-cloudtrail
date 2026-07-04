@@ -1,0 +1,28 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon CloudTrail API
+  version: 1.0.0
+extends: openapi/amazon-cloudtrail-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-slug: amazon-cloudtrail
+      x-apievangelist-provider: Amazon Web Services
+      x-apievangelist-categories:
+        - Audit
+        - Compliance
+        - Security
+        - Governance
+      x-mcp-server: mcp/amazon-cloudtrail-mcp.yml
+      x-packages: packages/amazon-cloudtrail-packages.yml
+  - target: $.info
+    update:
+      x-authentication:
+        scheme: aws-sigv4
+        description: Requests are authenticated with AWS Signature Version 4.
+  - target: $.tags[?(@.name=='Trails')]
+    update:
+      x-apievangelist-note: Core trail lifecycle operations for continuous delivery of activity logs to Amazon S3.
+  - target: $.tags[?(@.name=='Event Data Stores')]
+    update:
+      x-apievangelist-note: CloudTrail Lake event data stores enable SQL-based analysis of activity events.

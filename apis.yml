@@ -9,7 +9,7 @@ description: >-
   AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking user activity and API usage across AWS environments, hybrid setups, and multicloud
   deployments with immutable audit trails.
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-06-20'
 apis:
 - name: Amazon CloudTrail API
   description: API for creating and managing CloudTrail trails, event data stores, and channels for capturing AWS API activity and storing audit logs.
@@ -49,6 +49,8 @@ apis:
     url: json-schema/cloudtrail-lookup-events-response-schema.json
   - type: JSONLD
     url: json-ld/amazon-cloudtrail-context.jsonld
+  - type: Overlay
+    url: overlays/amazon-cloudtrail-openapi-overlay.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -84,6 +86,24 @@ common:
   url: rules/amazon-cloudtrail-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-cloudtrail-vocabulary.yaml
+- type: Packages
+  url: packages/amazon-cloudtrail-packages.yml
+- type: WellKnown
+  url: well-known/amazon-cloudtrail-well-known.yml
+- type: SecurityTxt
+  url: well-known/amazon-cloudtrail-security.txt
+- type: MCPServer
+  url: mcp/amazon-cloudtrail-mcp.yml
+- type: LLMsTxt
+  url: llms/amazon-cloudtrail-llms.txt
+- type: Conformance
+  url: conformance/amazon-cloudtrail-conformance.yml
+- type: ErrorCatalog
+  url: errors/amazon-cloudtrail-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/amazon-cloudtrail-lifecycle.yml
+- type: Blog
+  url: https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/
 - type: NaftikoCapability
   url: capabilities/audit-trail-management.yaml
 - type: Features

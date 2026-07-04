@@ -1,0 +1,109 @@
+# AWS CloudTrail API Reference
+
+> This is the CloudTrail API Reference. It provides descriptions of actions, data types, common parameters, and common errors for CloudTrail.
+
+- [Welcome](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/Welcome.md)
+- [Common Parameters](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/CommonParameters.md)
+- [Common Error Types](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/CommonErrors.md)
+
+## [Actions](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Operations.md)
+
+- [AddTags](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AddTags.md): Adds one or more tags to a trail, event data store, dashboard, or channel, up to a limit of 50.
+- [CancelQuery](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_CancelQuery.md)
+- [CreateChannel](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_CreateChannel.md)
+- [CreateDashboard](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_CreateDashboard.md)
+- [CreateEventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_CreateEventDataStore.md)
+- [CreateTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_CreateTrail.md): Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.
+- [DeleteChannel](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeleteChannel.md)
+- [DeleteDashboard](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeleteDashboard.md)
+- [DeleteEventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeleteEventDataStore.md)
+- [DeleteResourcePolicy](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeleteResourcePolicy.md): Deletes the resource-based policy attached to the CloudTrail event data store, dashboard, or channel.
+- [DeleteTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeleteTrail.md): Deletes a trail.
+- [DeregisterOrganizationDelegatedAdmin](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DeregisterOrganizationDelegatedAdmin.md): Removes CloudTrail delegated administrator permissions from a member account in an organization.
+- [DescribeQuery](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DescribeQuery.md)
+- [DescribeTrails](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DescribeTrails.md): Retrieves settings for one or more trails associated with the current Region for your account.
+- [DisableFederation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DisableFederation.md)
+- [EnableFederation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_EnableFederation.md)
+- [GenerateQuery](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GenerateQuery.md)
+- [GetChannel](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetChannel.md)
+- [GetDashboard](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetDashboard.md)
+- [GetEventConfiguration](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetEventConfiguration.md): Retrieves the current event configuration settings for the specified event data store or trail.
+- [GetEventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetEventDataStore.md)
+- [GetEventSelectors](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetEventSelectors.md): Describes the settings for the event selectors that you configured for your trail.
+- [GetImport](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetImport.md)
+- [GetInsightSelectors](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetInsightSelectors.md): Describes the settings for the Insights event selectors that you configured for your trail or event data store.
+- [GetQueryResults](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetQueryResults.md)
+- [GetResourcePolicy](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetResourcePolicy.md): Retrieves the JSON text of the resource-based policy document attached to the CloudTrail event data store, dashboard, or channel.
+- [GetTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetTrail.md): Returns settings information for a specified trail.
+- [GetTrailStatus](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetTrailStatus.md): Returns a JSON-formatted list of information about the specified trail.
+- [ListChannels](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListChannels.md)
+- [ListDashboards](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListDashboards.md)
+- [ListEventDataStores](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListEventDataStores.md)
+- [ListImportFailures](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListImportFailures.md)
+- [ListImports](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListImports.md)
+- [ListInsightsData](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListInsightsData.md): Returns Insights events generated on a trail that logs data events.
+- [ListInsightsMetricData](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListInsightsMetricData.md): Returns Insights metrics data for trails that have enabled Insights.
+- [ListPublicKeys](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListPublicKeys.md): Returns all public keys whose private keys were used to sign the digest files within the specified time range.
+- [ListQueries](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListQueries.md)
+- [ListTags](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListTags.md): Lists the tags for the specified trails, event data stores, dashboards, or channels in the current Region.
+- [ListTrails](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ListTrails.md): Lists trails that are in the current account.
+- [LookupEvents](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.md): Looks up management events or CloudTrail Insights events that are captured by CloudTrail.
+- [PutEventConfiguration](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PutEventConfiguration.md): Updates the event configuration settings for the specified event data store or trail.
+- [PutEventSelectors](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PutEventSelectors.md): Configures event selectors (also referred to as basic event selectors) or advanced event selectors for your trail.
+- [PutInsightSelectors](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PutInsightSelectors.md): Lets you enable Insights event logging on specific event categories by specifying the Insights selectors that you want to enable on an existing trail or event data store.
+- [PutResourcePolicy](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PutResourcePolicy.md): Attaches a resource-based permission policy to a CloudTrail event data store, dashboard, or channel.
+- [RegisterOrganizationDelegatedAdmin](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RegisterOrganizationDelegatedAdmin.md): Registers an organization’s member account as the CloudTrail delegated administrator.
+- [RemoveTags](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RemoveTags.md): Removes the specified tags from a trail, event data store, dashboard, or channel.
+- [RestoreEventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RestoreEventDataStore.md)
+- [SearchSampleQueries](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_SearchSampleQueries.md)
+- [StartDashboardRefresh](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StartDashboardRefresh.md)
+- [StartEventDataStoreIngestion](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StartEventDataStoreIngestion.md)
+- [StartImport](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StartImport.md)
+- [StartLogging](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StartLogging.md): Starts the recording of AWS API calls and log file delivery for a trail.
+- [StartQuery](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StartQuery.md)
+- [StopEventDataStoreIngestion](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StopEventDataStoreIngestion.md)
+- [StopImport](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StopImport.md)
+- [StopLogging](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_StopLogging.md): Suspends the recording of AWS API calls and log file delivery for the specified trail.
+- [UpdateChannel](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_UpdateChannel.md)
+- [UpdateDashboard](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_UpdateDashboard.md)
+- [UpdateEventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_UpdateEventDataStore.md)
+- [UpdateTrail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_UpdateTrail.md): Updates trail settings that control what events you are logging, and how to handle log files.
+
+
+## [Data Types](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Types.md)
+
+- [AdvancedEventSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.md): Advanced event selectors let you create fine-grained selectors for AWS CloudTrail management, data, and network activity events.
+- [AdvancedFieldSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.md): A single selector statement in an advanced event selector.
+- [AggregationConfiguration](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AggregationConfiguration.md): An object that contains configuration settings for aggregating events.
+- [Channel](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Channel.md): Contains information about a returned CloudTrail channel.
+- [ContextKeySelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ContextKeySelector.md): An object that contains information types to be included in CloudTrail enriched events.
+- [DashboardDetail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DashboardDetail.md): Provides information about a CloudTrail Lake dashboard.
+- [DataResource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.md): You can configure the DataResource in an EventSelector to log data events for the following three resource types:
+- [Destination](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Destination.md): Contains information about the destination receiving events.
+- [Event](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Event.md): Contains information about an event that was returned by a lookup request.
+- [EventDataStore](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_EventDataStore.md): A storage lake of event data against which you can run complex SQL-based queries.
+- [EventSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_EventSelector.md): Use event selectors to further specify the management and data event settings for your trail.
+- [ImportFailureListItem](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ImportFailureListItem.md): Provides information about an import failure.
+- [ImportsListItem](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ImportsListItem.md): Contains information about an import that was returned by a lookup request.
+- [ImportSource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ImportSource.md): The import source.
+- [ImportStatistics](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ImportStatistics.md): Provides statistics for the specified ImportID.
+- [IngestionStatus](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_IngestionStatus.md): A table showing information about the most recent successful and failed attempts to ingest events.
+- [InsightSelector](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_InsightSelector.md): A JSON string that contains a list of Insights types that are logged on a trail or event data store.
+- [LookupAttribute](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupAttribute.md): Specifies an attribute and value that filter the events returned.
+- [PartitionKey](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PartitionKey.md): Contains information about a partition key for an event data store.
+- [PublicKey](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_PublicKey.md): Contains information about a returned public key.
+- [Query](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Query.md): A SQL string of criteria about events that you want to collect in an event data store.
+- [QueryStatistics](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_QueryStatistics.md): Metadata about a query, such as the number of results.
+- [QueryStatisticsForDescribeQuery](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_QueryStatisticsForDescribeQuery.md): Gets metadata about a query, including the number of events that were matched, the total number of events scanned, the query run time in milliseconds, and the query's creation time.
+- [RefreshSchedule](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RefreshSchedule.md): The schedule for a dashboard refresh.
+- [RefreshScheduleFrequency](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RefreshScheduleFrequency.md): Specifies the frequency for a dashboard refresh schedule.
+- [RequestWidget](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_RequestWidget.md): Contains information about a widget on a CloudTrail Lake dashboard.
+- [Resource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Resource.md): Specifies the type and name of a resource referenced by an event.
+- [ResourceTag](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_ResourceTag.md): A resource tag.
+- [S3ImportSource](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_S3ImportSource.md): The settings for the source S3 bucket.
+- [SearchSampleQueriesSearchResult](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_SearchSampleQueriesSearchResult.md): A search result returned by the SearchSampleQueries operation.
+- [SourceConfig](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_SourceConfig.md): Contains configuration information about the channel.
+- [Tag](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Tag.md): A custom key-value pair associated with a resource such as a CloudTrail trail, event data store, dashboard, or channel.
+- [Trail](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Trail.md): The settings for a trail.
+- [TrailInfo](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_TrailInfo.md): Information about a CloudTrail trail, including the trail's name, home Region, and Amazon Resource Name (ARN).
+- [Widget](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_Widget.md): A widget on a CloudTrail Lake dashboard.

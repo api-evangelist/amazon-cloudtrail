@@ -1,0 +1,54 @@
+generated: '2026-06-20'
+method: searched
+source: AWS SDK registries (npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, crates.io)
+packages:
+  - language: javascript
+    registry: npm
+    name: "@aws-sdk/client-cloudtrail"
+    url: https://www.npmjs.com/package/@aws-sdk/client-cloudtrail
+    install: npm install @aws-sdk/client-cloudtrail
+    official: true
+  - language: python
+    registry: pypi
+    name: boto3
+    url: https://pypi.org/project/boto3/
+    install: pip install boto3
+    official: true
+    note: CloudTrail client accessed via boto3.client('cloudtrail')
+  - language: java
+    registry: maven
+    name: software.amazon.awssdk:cloudtrail
+    url: https://central.sonatype.com/artifact/software.amazon.awssdk/cloudtrail
+    install: "implementation 'software.amazon.awssdk:cloudtrail'"
+    official: true
+  - language: dotnet
+    registry: nuget
+    name: AWSSDK.CloudTrail
+    url: https://www.nuget.org/packages/AWSSDK.CloudTrail
+    install: dotnet add package AWSSDK.CloudTrail
+    official: true
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/aws/aws-sdk-go-v2/service/cloudtrail
+    url: https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/cloudtrail
+    install: go get github.com/aws/aws-sdk-go-v2/service/cloudtrail
+    official: true
+  - language: ruby
+    registry: rubygems
+    name: aws-sdk-cloudtrail
+    url: https://rubygems.org/gems/aws-sdk-cloudtrail
+    install: gem install aws-sdk-cloudtrail
+    official: true
+  - language: php
+    registry: packagist
+    name: aws/aws-sdk-php
+    url: https://packagist.org/packages/aws/aws-sdk-php
+    install: composer require aws/aws-sdk-php
+    official: true
+    note: CloudTrail accessed via Aws\CloudTrail\CloudTrailClient
+  - language: rust
+    registry: crates.io
+    name: aws-sdk-cloudtrail
+    url: https://crates.io/crates/aws-sdk-cloudtrail
+    install: cargo add aws-sdk-cloudtrail
+    official: true

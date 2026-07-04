@@ -1,0 +1,19 @@
+generated: '2026-06-20'
+method: searched
+source: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/, https://health.aws.amazon.com/health/status
+versioning:
+  scheme: date-based-api-version
+  current: '2013-11-01'
+  docs: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  note: >-
+    AWS query/JSON APIs pin the service API version (2013-11-01) as a request
+    parameter; new capabilities are added additively without breaking prior versions.
+deprecation:
+  policy_url: https://docs.aws.amazon.com/whitepapers/latest/aws-overview/aws-glossary.html
+  sunset_header: false
+  note: AWS communicates service/API deprecations via documentation and account notifications, not RFC 8594 Sunset/Deprecation headers.
+sla:
+  url: https://aws.amazon.com/cloudtrail/sla/
+  note: CloudTrail is covered by an AWS Service Level Agreement.
+status_page: https://health.aws.amazon.com/health/status
+deprecated_operations: []
