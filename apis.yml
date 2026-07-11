@@ -52,6 +52,12 @@ apis:
   - type: Overlay
     url: overlays/amazon-cloudtrail-openapi-overlay.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-cloudtrail-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-cloudtrail-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-cloudtrail-domain-security.yml
 - type: Portal
   url: https://aws.amazon.com/
 - type: Website
