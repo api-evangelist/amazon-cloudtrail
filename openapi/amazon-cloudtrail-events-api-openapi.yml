@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: Amazon CloudTrail Event Data Stores Events API
+  description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
+  version: '2013-11-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+servers:
+- url: https://cloudtrail.{region}.amazonaws.com
+  description: Amazon CloudTrail Regional Endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS Region
+tags:
+- name: Events
+  description: Operations for looking up and querying events
+paths:
+  /events/lookup:
+    post:
+      operationId: LookupEvents
+      summary: Amazon CloudTrail Look up events
+      description: Looks up management events or CloudTrail Insights events captured by CloudTrail. You can look up events that occurred in a region within the last 90 days.
+      tags:
+      - Events
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LookupEventsRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LookupEventsResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidLookupAttributesException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+components:
+  schemas:
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    LookupEventsResponse:
+      type: object
+      properties:
+        Events:
+          type: array
+          items:
+            type: object
+            properties:
+              EventId:
+                type: string
+              EventName:
+                type: string
+              EventTime:
+                type: string
+                format: date-time
+              EventSource:
+                type: string
+              Username:
+                type: string
+              CloudTrailEvent:
+                type: string
+              ReadOnly:
+                type: string
+        NextToken:
+          type: string
+    LookupEventsRequest:
+      type: object
+      properties:
+        LookupAttributes:
+          type: array
+          items:
+            type: object
+            properties:
+              AttributeKey:
+                type: string
+                enum:
+                - EventId
+                - EventName
+                - ReadOnly
+                - Username
+                - ResourceType
+                - ResourceName
+                - EventSource
+                - AccessKeyId
+              AttributeValue:
+                type: string
+        StartTime:
+          type: string
+          format: date-time
+        EndTime:
+          type: string
+          format: date-time
+        MaxResults:
+          type: integer
+        NextToken:
+          type: string
+    InvalidLookupAttributesException:
+      type: object
+      properties:
+        message:
+          type: string
+externalDocs:
+  description: Amazon CloudTrail API Reference
+  url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/

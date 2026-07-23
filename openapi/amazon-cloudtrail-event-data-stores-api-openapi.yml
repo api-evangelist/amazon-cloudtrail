@@ -1,0 +1,150 @@
+openapi: 3.1.0
+info:
+  title: Amazon CloudTrail Event Data Stores API
+  description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
+  version: '2013-11-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+servers:
+- url: https://cloudtrail.{region}.amazonaws.com
+  description: Amazon CloudTrail Regional Endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS Region
+tags:
+- name: Event Data Stores
+  description: Operations for managing CloudTrail Lake event data stores
+paths:
+  /event-data-stores:
+    post:
+      operationId: CreateEventDataStore
+      summary: Amazon CloudTrail Create an event data store
+      description: Creates a new event data store for CloudTrail Lake, which lets you run SQL-based queries on your CloudTrail events.
+      tags:
+      - Event Data Stores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateEventDataStoreRequest'
+      responses:
+        '200':
+          description: Event data store created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateEventDataStoreResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+    get:
+      operationId: ListEventDataStores
+      summary: Amazon CloudTrail List event data stores
+      description: Returns information about all event data stores in the account.
+      tags:
+      - Event Data Stores
+      parameters:
+      - name: maxResults
+        in: query
+        description: Maximum number of results to return.
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 25
+      - name: nextToken
+        in: query
+        description: Token for pagination.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListEventDataStoresResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+components:
+  schemas:
+    InvalidParameterException:
+      type: object
+      properties:
+        message:
+          type: string
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    CreateEventDataStoreResponse:
+      type: object
+      properties:
+        EventDataStoreArn:
+          type: string
+        Name:
+          type: string
+        Status:
+          type: string
+        RetentionPeriod:
+          type: integer
+        CreatedTimestamp:
+          type: string
+          format: date-time
+    ListEventDataStoresResponse:
+      type: object
+      properties:
+        EventDataStores:
+          type: array
+          items:
+            type: object
+            properties:
+              EventDataStoreArn:
+                type: string
+              Name:
+                type: string
+              Status:
+                type: string
+              RetentionPeriod:
+                type: integer
+        NextToken:
+          type: string
+    CreateEventDataStoreRequest:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          type: string
+          description: The name of the event data store.
+        RetentionPeriod:
+          type: integer
+          description: Retention period in days.
+        MultiRegionEnabled:
+          type: boolean
+externalDocs:
+  description: Amazon CloudTrail API Reference
+  url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/

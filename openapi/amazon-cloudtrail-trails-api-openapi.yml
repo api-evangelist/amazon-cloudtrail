@@ -1,0 +1,218 @@
+openapi: 3.1.0
+info:
+  title: Amazon CloudTrail Event Data Stores Trails API
+  description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
+  version: '2013-11-01'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+servers:
+- url: https://cloudtrail.{region}.amazonaws.com
+  description: Amazon CloudTrail Regional Endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS Region
+tags:
+- name: Trails
+  description: Operations for creating and managing CloudTrail trails
+paths:
+  /trails:
+    post:
+      operationId: CreateTrail
+      summary: Amazon CloudTrail Create a trail
+      description: Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.
+      tags:
+      - Trails
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTrailRequest'
+      responses:
+        '200':
+          description: Trail created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTrailResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidTrailNameException'
+        '409':
+          description: Trail already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrailAlreadyExistsException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+    get:
+      operationId: DescribeTrails
+      summary: Amazon CloudTrail Describe trails
+      description: Retrieves settings for one or more trails associated with the current region for your account.
+      tags:
+      - Trails
+      parameters:
+      - name: trailNameList
+        in: query
+        description: List of trail names or ARNs.
+        schema:
+          type: array
+          items:
+            type: string
+      - name: includeShadowTrails
+        in: query
+        description: Whether to include shadow trails.
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeTrailsResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidTrailNameException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+  /trails/{trailName}:
+    delete:
+      operationId: DeleteTrail
+      summary: Amazon CloudTrail Delete a trail
+      description: Deletes a trail. This operation must be called from the region in which the trail was created.
+      tags:
+      - Trails
+      parameters:
+      - name: trailName
+        in: path
+        required: true
+        description: The name or ARN of the trail.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Trail deleted
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidTrailNameException'
+        '404':
+          description: Trail not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrailNotFoundException'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OperationNotPermittedException'
+components:
+  schemas:
+    CreateTrailResponse:
+      type: object
+      properties:
+        Name:
+          type: string
+        S3BucketName:
+          type: string
+        TrailARN:
+          type: string
+        IsMultiRegionTrail:
+          type: boolean
+        LogFileValidationEnabled:
+          type: boolean
+    TrailNotFoundException:
+      type: object
+      properties:
+        message:
+          type: string
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    TrailAlreadyExistsException:
+      type: object
+      properties:
+        message:
+          type: string
+    DescribeTrailsResponse:
+      type: object
+      properties:
+        trailList:
+          type: array
+          items:
+            type: object
+            properties:
+              Name:
+                type: string
+              S3BucketName:
+                type: string
+              TrailARN:
+                type: string
+              HomeRegion:
+                type: string
+              IsMultiRegionTrail:
+                type: boolean
+              LogFileValidationEnabled:
+                type: boolean
+              HasCustomEventSelectors:
+                type: boolean
+    CreateTrailRequest:
+      type: object
+      required:
+      - Name
+      - S3BucketName
+      properties:
+        Name:
+          type: string
+          description: The name of the trail.
+        S3BucketName:
+          type: string
+          description: The name of the S3 bucket for log file delivery.
+        S3KeyPrefix:
+          type: string
+          description: The S3 key prefix for log file delivery.
+        IsMultiRegionTrail:
+          type: boolean
+          description: Whether the trail is created in all regions.
+        EnableLogFileValidation:
+          type: boolean
+          description: Whether log file integrity validation is enabled.
+        CloudWatchLogsLogGroupArn:
+          type: string
+          description: The ARN of the CloudWatch Logs log group.
+        CloudWatchLogsRoleArn:
+          type: string
+          description: The role ARN for CloudWatch Logs delivery.
+    InvalidTrailNameException:
+      type: object
+      properties:
+        message:
+          type: string
+externalDocs:
+  description: Amazon CloudTrail API Reference
+  url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
