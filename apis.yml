@@ -3,7 +3,18 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/apis.yml
 name: Amazon CloudTrail
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-cloudtrail.png
 specificationVersion: '0.19'
 description: >-
   AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking user activity and API usage across AWS environments, hybrid setups, and multicloud
@@ -11,20 +22,16 @@ description: >-
 created: '2024-01-15'
 modified: '2026-06-20'
 apis:
-- name: Amazon CloudTrail API
-  description: API for creating and managing CloudTrail trails, event data stores, and channels for capturing AWS API activity and storing audit logs.
-  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+- aid: amazon-cloudtrail:amazon-cloudtrail-event-data-stores-api
+  name: Amazon CloudTrail Event Data Stores API
+  description: Operations for managing CloudTrail Lake event data stores
   humanURL: https://aws.amazon.com/cloudtrail/
   baseURL: https://cloudtrail.us-east-1.amazonaws.com
   tags:
-  - AWS
-  - CloudTrail
-  - Audit
-  - Compliance
-  - Security
+  - Event Data Stores
   properties:
   - type: OpenAPI
-    url: openapi/amazon-cloudtrail-openapi.yml
+    url: openapi/amazon-cloudtrail-event-data-stores-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
   - type: GettingStarted
@@ -49,8 +56,74 @@ apis:
     url: json-schema/cloudtrail-lookup-events-response-schema.json
   - type: JSONLD
     url: json-ld/amazon-cloudtrail-context.jsonld
-  - type: Overlay
-    url: overlays/amazon-cloudtrail-openapi-overlay.yaml
+- aid: amazon-cloudtrail:amazon-cloudtrail-events-api
+  name: Amazon CloudTrail Events API
+  description: Operations for looking up and querying events
+  humanURL: https://aws.amazon.com/cloudtrail/
+  baseURL: https://cloudtrail.us-east-1.amazonaws.com
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-cloudtrail-events-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  - type: GettingStarted
+    url: https://aws.amazon.com/cloudtrail/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/cloudtrail/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
+  - type: JSONSchema
+    url: json-schema/cloudtrail-create-trail-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-create-trail-response-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-describe-trails-response-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-lookup-events-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-lookup-events-response-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-cloudtrail-context.jsonld
+- aid: amazon-cloudtrail:amazon-cloudtrail-trails-api
+  name: Amazon CloudTrail Trails API
+  description: Operations for creating and managing CloudTrail trails
+  humanURL: https://aws.amazon.com/cloudtrail/
+  baseURL: https://cloudtrail.us-east-1.amazonaws.com
+  tags:
+  - Trails
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-cloudtrail-trails-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  - type: GettingStarted
+    url: https://aws.amazon.com/cloudtrail/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/cloudtrail/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/cloudtrail/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
+  - type: JSONSchema
+    url: json-schema/cloudtrail-create-trail-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-create-trail-response-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-describe-trails-response-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-lookup-events-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudtrail-lookup-events-response-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-cloudtrail-context.jsonld
 common:
 - type: AgenticAccess
   url: agentic-access/amazon-cloudtrail-agentic-access.yml
