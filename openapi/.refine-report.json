@@ -1,0 +1,18 @@
+{
+  "provider": "amazon-cloudtrail",
+  "sources": [
+    "amazon-cloudtrail-event-data-stores-api-openapi.yml",
+    "amazon-cloudtrail-events-api-openapi.yml",
+    "amazon-cloudtrail-trails-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-cloudtrail-event-data-stores-api-openapi.yml",
+    "amazon-cloudtrail-events-api-openapi.yml",
+    "amazon-cloudtrail-trails-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
