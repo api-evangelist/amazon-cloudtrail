@@ -125,6 +125,8 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-cloudtrail-context.jsonld
 common:
+- type: Overlay
+  url: overlays/amazon-cloudtrail-openapi-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/amazon-cloudtrail-agentic-access.yml
 - type: TrustCenter
