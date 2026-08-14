@@ -1,6 +1,5 @@
 aid: amazon-cloudtrail
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/apis.yml
 name: Amazon CloudTrail
 type: Index
 accessModel:
@@ -17,220 +16,219 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-cloudtrail.png
 specificationVersion: '0.19'
 description: >-
-  AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking user activity and API usage across AWS environments, hybrid setups, and multicloud
-  deployments with immutable audit trails.
+  AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking
+  user activity and API usage across AWS environments, hybrid setups, and multicloud deployments with immutable audit
+  trails.
 created: '2024-01-15'
 modified: '2026-06-20'
 apis:
-- aid: amazon-cloudtrail:amazon-cloudtrail-event-data-stores-api
-  name: Amazon CloudTrail Event Data Stores API
-  description: Operations for managing CloudTrail Lake event data stores
-  humanURL: https://aws.amazon.com/cloudtrail/
-  baseURL: https://cloudtrail.us-east-1.amazonaws.com
-  tags:
-  - Event Data Stores
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-cloudtrail-event-data-stores-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: GettingStarted
-    url: https://aws.amazon.com/cloudtrail/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/cloudtrail/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/cloudtrail/faqs/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: CLI
-    url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-describe-trails-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-response-schema.json
-  - type: JSONLD
-    url: json-ld/amazon-cloudtrail-context.jsonld
-- aid: amazon-cloudtrail:amazon-cloudtrail-events-api
-  name: Amazon CloudTrail Events API
-  description: Operations for looking up and querying events
-  humanURL: https://aws.amazon.com/cloudtrail/
-  baseURL: https://cloudtrail.us-east-1.amazonaws.com
-  tags:
-  - Events
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-cloudtrail-events-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: GettingStarted
-    url: https://aws.amazon.com/cloudtrail/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/cloudtrail/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/cloudtrail/faqs/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: CLI
-    url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-describe-trails-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-response-schema.json
-  - type: JSONLD
-    url: json-ld/amazon-cloudtrail-context.jsonld
-- aid: amazon-cloudtrail:amazon-cloudtrail-trails-api
-  name: Amazon CloudTrail Trails API
-  description: Operations for creating and managing CloudTrail trails
-  humanURL: https://aws.amazon.com/cloudtrail/
-  baseURL: https://cloudtrail.us-east-1.amazonaws.com
-  tags:
-  - Trails
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-cloudtrail-trails-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: GettingStarted
-    url: https://aws.amazon.com/cloudtrail/getting-started/
-  - type: Pricing
-    url: https://aws.amazon.com/cloudtrail/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/cloudtrail/faqs/
-  - type: APIReference
-    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-  - type: CLI
-    url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-create-trail-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-describe-trails-response-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-request-schema.json
-  - type: JSONSchema
-    url: json-schema/cloudtrail-lookup-events-response-schema.json
-  - type: JSONLD
-    url: json-ld/amazon-cloudtrail-context.jsonld
+  - aid: amazon-cloudtrail:amazon-cloudtrail-event-data-stores-api
+    name: Amazon CloudTrail Event Data Stores API
+    description: Operations for managing CloudTrail Lake event data stores
+    humanURL: https://aws.amazon.com/cloudtrail/
+    baseURL: https://cloudtrail.us-east-1.amazonaws.com
+    tags:
+      - Event Data Stores
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-cloudtrail-event-data-stores-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: GettingStarted
+        url: https://aws.amazon.com/cloudtrail/getting-started/
+      - type: Pricing
+        url: https://aws.amazon.com/cloudtrail/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/cloudtrail/faqs/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: CLI
+        url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-describe-trails-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-response-schema.json
+      - type: JSONLD
+        url: json-ld/amazon-cloudtrail-context.jsonld
+  - aid: amazon-cloudtrail:amazon-cloudtrail-events-api
+    name: Amazon CloudTrail Events API
+    description: Operations for looking up and querying events
+    humanURL: https://aws.amazon.com/cloudtrail/
+    baseURL: https://cloudtrail.us-east-1.amazonaws.com
+    tags:
+      - Events
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-cloudtrail-events-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: GettingStarted
+        url: https://aws.amazon.com/cloudtrail/getting-started/
+      - type: Pricing
+        url: https://aws.amazon.com/cloudtrail/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/cloudtrail/faqs/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: CLI
+        url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-describe-trails-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-response-schema.json
+      - type: JSONLD
+        url: json-ld/amazon-cloudtrail-context.jsonld
+  - aid: amazon-cloudtrail:amazon-cloudtrail-trails-api
+    name: Amazon CloudTrail Trails API
+    description: Operations for creating and managing CloudTrail trails
+    humanURL: https://aws.amazon.com/cloudtrail/
+    baseURL: https://cloudtrail.us-east-1.amazonaws.com
+    tags:
+      - Trails
+    properties:
+      - type: OpenAPI
+        url: openapi/amazon-cloudtrail-trails-api-openapi.yml
+      - type: Documentation
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: GettingStarted
+        url: https://aws.amazon.com/cloudtrail/getting-started/
+      - type: Pricing
+        url: https://aws.amazon.com/cloudtrail/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/cloudtrail/faqs/
+      - type: APIReference
+        url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+      - type: CLI
+        url: https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-create-trail-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-describe-trails-response-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-request-schema.json
+      - type: JSONSchema
+        url: json-schema/cloudtrail-lookup-events-response-schema.json
+      - type: JSONLD
+        url: json-ld/amazon-cloudtrail-context.jsonld
 common:
-- type: Overlay
-  url: overlays/amazon-cloudtrail-openapi-overlay.yaml
-- type: AgenticAccess
-  url: agentic-access/amazon-cloudtrail-agentic-access.yml
-- type: TrustCenter
-  url: security/amazon-cloudtrail-trust-center.yml
-- type: VulnerabilityDisclosure
-  url: security/amazon-cloudtrail-vulnerability-disclosure.yml
-- type: DomainSecurity
-  url: security/amazon-cloudtrail-domain-security.yml
-- type: Portal
-  url: https://aws.amazon.com/
-- type: Website
-  url: https://aws.amazon.com/cloudtrail/
-- type: Documentation
-  url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
-- type: TermsOfService
-  url: https://aws.amazon.com/service-terms/
-- type: PrivacyPolicy
-  url: https://aws.amazon.com/privacy/
-- type: Support
-  url: https://aws.amazon.com/premiumsupport/
-- type: Blog
-  url: https://aws.amazon.com/blogs/security/
-- type: GitHubOrganization
-  url: https://github.com/aws
-- type: Console
-  url: https://console.aws.amazon.com/cloudtrail/
-- type: SignUp
-  url: https://signin.aws.amazon.com/signup?request_type=register
-- type: StatusPage
-  url: https://health.aws.amazon.com/health/status
-- type: YouTube
-  url: https://www.youtube.com/user/AmazonWebServices
-- type: StackOverflow
-  url: https://stackoverflow.com/questions/tagged/aws-cloudtrail
-- type: Contact
-  url: https://aws.amazon.com/contact-us/
-- type: Compliance
-  url: https://aws.amazon.com/compliance/
-- type: SpectralRules
-  url: rules/amazon-cloudtrail-spectral-rules.yml
-- type: Vocabulary
-  url: vocabulary/amazon-cloudtrail-vocabulary.yaml
-- type: Packages
-  url: packages/amazon-cloudtrail-packages.yml
-- type: WellKnown
-  url: well-known/amazon-cloudtrail-well-known.yml
-- type: SecurityTxt
-  url: well-known/amazon-cloudtrail-security.txt
-- type: MCPServer
-  url: mcp/amazon-cloudtrail-mcp.yml
-- type: LLMsTxt
-  url: llms/amazon-cloudtrail-llms.txt
-- type: Conformance
-  url: conformance/amazon-cloudtrail-conformance.yml
-- type: ErrorCatalog
-  url: errors/amazon-cloudtrail-problem-types.yml
-- type: Lifecycle
-  url: lifecycle/amazon-cloudtrail-lifecycle.yml
-- type: Blog
-  url: https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/
-- type: NaftikoCapability
-  url: capabilities/audit-trail-management.yaml
-- type: Features
-  data:
-  - name: Event Aggregation
-    description: Consolidate activity events from AWS, external providers, on-premises, and SaaS into a unified audit trail.
-  - name: Immutable Audit Logs
-    description: Store audit-worthy events immutably to ensure tamper-proof compliance records.
-  - name: CloudTrail Insights
-    description: Detect unusual API activity patterns with anomaly detection on management and data events.
-  - name: SQL Query Support
-    description: Investigate issues using SQL queries or natural language with Amazon Athena integration.
-  - name: Multi-Region Trails
-    description: Create trails that capture events from all AWS regions in a single S3 bucket.
-- type: UseCases
-  data:
-  - name: Compliance Auditing
-    description: Demonstrate adherence to SOC, PCI DSS, and HIPAA regulations with audit logs.
-  - name: Security Monitoring
-    description: Record and monitor user and API activity for security incident detection.
-  - name: Operational Debugging
-    description: Investigate operational issues by querying historical API activity.
-  - name: Governance
-    description: Track who made changes to AWS resources and when for governance accountability.
-- type: Integrations
-  data:
-  - name: Amazon S3
-    description: Store CloudTrail logs in S3 buckets with lifecycle management.
-  - name: Amazon Athena
-    description: Query CloudTrail logs using SQL via Athena integration.
-  - name: Amazon CloudWatch
-    description: Stream CloudTrail events to CloudWatch Logs for real-time monitoring.
-  - name: AWS Lambda
-    description: Trigger Lambda functions based on CloudTrail events for automated response.
-  - name: AWS Security Hub
-    description: Send CloudTrail findings to Security Hub for centralized security management.
+  - type: Overlay
+    url: overlays/amazon-cloudtrail-openapi-overlay.yaml
+  - type: AgenticAccess
+    url: agentic-access/amazon-cloudtrail-agentic-access.yml
+  - type: TrustCenter
+    url: security/amazon-cloudtrail-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-cloudtrail-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-cloudtrail-domain-security.yml
+  - type: Portal
+    url: https://aws.amazon.com/
+  - type: Website
+    url: https://aws.amazon.com/cloudtrail/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
+  - type: TermsOfService
+    url: https://aws.amazon.com/service-terms/
+  - type: PrivacyPolicy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: Blog
+    url: https://aws.amazon.com/blogs/security/
+  - type: GitHubOrganization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/cloudtrail/
+  - type: SignUp
+    url: https://signin.aws.amazon.com/signup?request_type=register
+  - type: StatusPage
+    url: https://health.aws.amazon.com/health/status
+  - type: YouTube
+    url: https://www.youtube.com/user/AmazonWebServices
+  - type: StackOverflow
+    url: https://stackoverflow.com/questions/tagged/aws-cloudtrail
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+  - type: Compliance
+    url: https://aws.amazon.com/compliance/
+  - type: SpectralRules
+    url: rules/amazon-cloudtrail-spectral-rules.yml
+  - type: Vocabulary
+    url: vocabulary/amazon-cloudtrail-vocabulary.yaml
+  - type: Packages
+    url: packages/amazon-cloudtrail-packages.yml
+  - type: WellKnown
+    url: well-known/amazon-cloudtrail-well-known.yml
+  - type: SecurityTxt
+    url: well-known/amazon-cloudtrail-security.txt
+  - type: MCPServer
+    url: mcp/amazon-cloudtrail-mcp.yml
+  - type: LLMsTxt
+    url: llms/amazon-cloudtrail-llms.txt
+  - type: Conformance
+    url: conformance/amazon-cloudtrail-conformance.yml
+  - type: ErrorCatalog
+    url: errors/amazon-cloudtrail-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/amazon-cloudtrail-lifecycle.yml
+  - type: Blog
+    url: https://aws.amazon.com/blogs/mt/tag/aws-cloudtrail/feed/
+  - type: Features
+    data:
+      - name: Event Aggregation
+        description: Consolidate activity events from AWS, external providers, on-premises, and SaaS into a unified audit trail.
+      - name: Immutable Audit Logs
+        description: Store audit-worthy events immutably to ensure tamper-proof compliance records.
+      - name: CloudTrail Insights
+        description: Detect unusual API activity patterns with anomaly detection on management and data events.
+      - name: SQL Query Support
+        description: Investigate issues using SQL queries or natural language with Amazon Athena integration.
+      - name: Multi-Region Trails
+        description: Create trails that capture events from all AWS regions in a single S3 bucket.
+  - type: UseCases
+    data:
+      - name: Compliance Auditing
+        description: Demonstrate adherence to SOC, PCI DSS, and HIPAA regulations with audit logs.
+      - name: Security Monitoring
+        description: Record and monitor user and API activity for security incident detection.
+      - name: Operational Debugging
+        description: Investigate operational issues by querying historical API activity.
+      - name: Governance
+        description: Track who made changes to AWS resources and when for governance accountability.
+  - type: Integrations
+    data:
+      - name: Amazon S3
+        description: Store CloudTrail logs in S3 buckets with lifecycle management.
+      - name: Amazon Athena
+        description: Query CloudTrail logs using SQL via Athena integration.
+      - name: Amazon CloudWatch
+        description: Stream CloudTrail events to CloudWatch Logs for real-time monitoring.
+      - name: AWS Lambda
+        description: Trigger Lambda functions based on CloudTrail events for automated response.
+      - name: AWS Security Hub
+        description: Send CloudTrail findings to Security Hub for centralized security management.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-  url: https://apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
 tags:
-- AWS
-- CloudTrail
-- Audit
-- Compliance
-- Governance
-- Security
+  - AWS
+  - CloudTrail
+  - Audit
+  - Compliance
+  - Governance
+  - Security
