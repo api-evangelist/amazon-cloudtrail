@@ -14,7 +14,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-cloudtrail.png
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking
   user activity and API usage across AWS environments, hybrid setups, and multicloud deployments with immutable audit
