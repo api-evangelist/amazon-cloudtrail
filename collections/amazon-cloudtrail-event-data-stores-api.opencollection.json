@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon CloudTrail Event Data Stores API",
+    "version": "2013-11-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Event Data Stores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon CloudTrail List event data stores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://cloudtrail.{region}.amazonaws.com/event-data-stores",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "Token for pagination."
+              }
+            ]
+          },
+          "docs": "Returns information about all event data stores in the account."
+        },
+        {
+          "info": {
+            "name": "Amazon CloudTrail Create an event data store",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://cloudtrail.{region}.amazonaws.com/event-data-stores",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new event data store for CloudTrail Lake, which lets you run SQL-based queries on your CloudTrail events."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

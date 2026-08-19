@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon CloudTrail Event Data Stores Trails API",
+    "version": "2013-11-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Trails",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon CloudTrail Describe trails",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://cloudtrail.{region}.amazonaws.com/trails",
+            "params": [
+              {
+                "name": "trailNameList",
+                "value": "",
+                "type": "query",
+                "description": "List of trail names or ARNs."
+              },
+              {
+                "name": "includeShadowTrails",
+                "value": "",
+                "type": "query",
+                "description": "Whether to include shadow trails."
+              }
+            ]
+          },
+          "docs": "Retrieves settings for one or more trails associated with the current region for your account."
+        },
+        {
+          "info": {
+            "name": "Amazon CloudTrail Create a trail",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://cloudtrail.{region}.amazonaws.com/trails",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket."
+        },
+        {
+          "info": {
+            "name": "Amazon CloudTrail Delete a trail",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://cloudtrail.{region}.amazonaws.com/trails/:trailName",
+            "params": [
+              {
+                "name": "trailName",
+                "value": "",
+                "type": "path",
+                "description": "The name or ARN of the trail."
+              }
+            ]
+          },
+          "docs": "Deletes a trail. This operation must be called from the region in which the trail was created."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

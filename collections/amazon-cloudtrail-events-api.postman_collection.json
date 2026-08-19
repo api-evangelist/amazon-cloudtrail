@@ -1,0 +1,250 @@
+{
+  "item": [
+    {
+      "id": "7713a870-235f-4994-a087-80bd484cef70",
+      "name": "Events",
+      "description": {
+        "content": "Operations for looking up and querying events",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e9a13021-4f10-40ba-a42f-f92c6c037450",
+          "name": "Amazon CloudTrail Look up events",
+          "request": {
+            "name": "Amazon CloudTrail Look up events",
+            "description": {
+              "content": "Looks up management events or CloudTrail Insights events captured by CloudTrail. You can look up events that occurred in a region within the last 90 days.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "events",
+                "lookup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS Region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"LookupAttributes\": [\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    },\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    }\n  ],\n  \"StartTime\": \"<dateTime>\",\n  \"EndTime\": \"<dateTime>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "870cb153-89dc-4d97-b567-2e4cd23bf6d8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS Region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"LookupAttributes\": [\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    },\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    }\n  ],\n  \"StartTime\": \"<dateTime>\",\n  \"EndTime\": \"<dateTime>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Events\": [\n    {\n      \"EventId\": \"string\",\n      \"EventName\": \"string\",\n      \"EventTime\": \"1948-06-10T03:21:03.374Z\",\n      \"EventSource\": \"string\",\n      \"Username\": \"string\",\n      \"CloudTrailEvent\": \"string\",\n      \"ReadOnly\": \"string\"\n    },\n    {\n      \"EventId\": \"string\",\n      \"EventName\": \"string\",\n      \"EventTime\": \"1979-05-14T05:37:07.840Z\",\n      \"EventSource\": \"string\",\n      \"Username\": \"string\",\n      \"CloudTrailEvent\": \"string\",\n      \"ReadOnly\": \"string\"\n    }\n  ],\n  \"NextToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c533b150-2977-4d51-b67a-e6198ac31265",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS Region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"LookupAttributes\": [\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    },\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    }\n  ],\n  \"StartTime\": \"<dateTime>\",\n  \"EndTime\": \"<dateTime>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "df932810-298f-421a-abeb-23db7e0d9f25",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS Region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"LookupAttributes\": [\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    },\n    {\n      \"AttributeKey\": \"<string>\",\n      \"AttributeValue\": \"<string>\"\n    }\n  ],\n  \"StartTime\": \"<dateTime>\",\n  \"EndTime\": \"<dateTime>\",\n  \"MaxResults\": \"<integer>\",\n  \"NextToken\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS Region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://cloudtrail.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ccc42ab5-a7b2-4e7a-945e-85f42800cdfd",
+    "name": "Amazon CloudTrail Event Data Stores Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.\n\nContact Support:\n Name: Amazon Web Services",
+      "type": "text/plain"
+    }
+  }
+}

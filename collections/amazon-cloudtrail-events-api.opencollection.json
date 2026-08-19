@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon CloudTrail Event Data Stores Events API",
+    "version": "2013-11-01"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon CloudTrail Look up events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://cloudtrail.{region}.amazonaws.com/events/lookup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Looks up management events or CloudTrail Insights events captured by CloudTrail. You can look up events that occurred in a region within the last 90 days."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
