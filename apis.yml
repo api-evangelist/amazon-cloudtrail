@@ -62,6 +62,8 @@ apis:
     humanURL: https://aws.amazon.com/cloudtrail/
     baseURL: https://cloudtrail.us-east-1.amazonaws.com
     tags:
+      - Event
+    tags_raw:
       - Events
     properties:
       - type: OpenAPI
