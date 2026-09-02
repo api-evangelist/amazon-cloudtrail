@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon CloudTrail Event Data Stores API
   description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
@@ -95,25 +95,19 @@ components:
       properties:
         message:
           type: string
-    OperationNotPermittedException:
+    CreateEventDataStoreRequest:
       type: object
+      required:
+      - Name
       properties:
-        message:
-          type: string
-    CreateEventDataStoreResponse:
-      type: object
-      properties:
-        EventDataStoreArn:
-          type: string
         Name:
           type: string
-        Status:
-          type: string
+          description: The name of the event data store.
         RetentionPeriod:
           type: integer
-        CreatedTimestamp:
-          type: string
-          format: date-time
+          description: Retention period in days.
+        MultiRegionEnabled:
+          type: boolean
     ListEventDataStoresResponse:
       type: object
       properties:
@@ -132,19 +126,25 @@ components:
                 type: integer
         NextToken:
           type: string
-    CreateEventDataStoreRequest:
+    CreateEventDataStoreResponse:
       type: object
-      required:
-      - Name
       properties:
+        EventDataStoreArn:
+          type: string
         Name:
           type: string
-          description: The name of the event data store.
+        Status:
+          type: string
         RetentionPeriod:
           type: integer
-          description: Retention period in days.
-        MultiRegionEnabled:
-          type: boolean
+        CreatedTimestamp:
+          type: string
+          format: date-time
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/

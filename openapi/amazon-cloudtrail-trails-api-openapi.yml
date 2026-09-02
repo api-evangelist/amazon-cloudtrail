@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon CloudTrail Event Data Stores Trails API
   description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
@@ -131,29 +131,6 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    CreateTrailResponse:
-      type: object
-      properties:
-        Name:
-          type: string
-        S3BucketName:
-          type: string
-        TrailARN:
-          type: string
-        IsMultiRegionTrail:
-          type: boolean
-        LogFileValidationEnabled:
-          type: boolean
-    TrailNotFoundException:
-      type: object
-      properties:
-        message:
-          type: string
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
     TrailAlreadyExistsException:
       type: object
       properties:
@@ -181,6 +158,34 @@ components:
                 type: boolean
               HasCustomEventSelectors:
                 type: boolean
+    CreateTrailResponse:
+      type: object
+      properties:
+        Name:
+          type: string
+        S3BucketName:
+          type: string
+        TrailARN:
+          type: string
+        IsMultiRegionTrail:
+          type: boolean
+        LogFileValidationEnabled:
+          type: boolean
+    TrailNotFoundException:
+      type: object
+      properties:
+        message:
+          type: string
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    InvalidTrailNameException:
+      type: object
+      properties:
+        message:
+          type: string
     CreateTrailRequest:
       type: object
       required:
@@ -208,11 +213,6 @@ components:
         CloudWatchLogsRoleArn:
           type: string
           description: The role ARN for CloudWatch Logs delivery.
-    InvalidTrailNameException:
-      type: object
-      properties:
-        message:
-          type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
