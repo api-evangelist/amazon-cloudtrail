@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon CloudTrail Event Data Stores Events API
+  title: Amazon CloudTrail Events API
   description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
   version: '2013-11-01'
   contact:
@@ -52,6 +52,41 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
+    LookupEventsResponse:
+      type: object
+      properties:
+        Events:
+          type: array
+          items:
+            type: object
+            properties:
+              EventId:
+                type: string
+              EventName:
+                type: string
+              EventTime:
+                type: string
+                format: date-time
+              EventSource:
+                type: string
+              Username:
+                type: string
+              CloudTrailEvent:
+                type: string
+              ReadOnly:
+                type: string
+        NextToken:
+          type: string
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    InvalidLookupAttributesException:
+      type: object
+      properties:
+        message:
+          type: string
     LookupEventsRequest:
       type: object
       properties:
@@ -81,41 +116,6 @@ components:
           format: date-time
         MaxResults:
           type: integer
-        NextToken:
-          type: string
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
-    InvalidLookupAttributesException:
-      type: object
-      properties:
-        message:
-          type: string
-    LookupEventsResponse:
-      type: object
-      properties:
-        Events:
-          type: array
-          items:
-            type: object
-            properties:
-              EventId:
-                type: string
-              EventName:
-                type: string
-              EventTime:
-                type: string
-                format: date-time
-              EventSource:
-                type: string
-              Username:
-                type: string
-              CloudTrailEvent:
-                type: string
-              ReadOnly:
-                type: string
         NextToken:
           type: string
 externalDocs:

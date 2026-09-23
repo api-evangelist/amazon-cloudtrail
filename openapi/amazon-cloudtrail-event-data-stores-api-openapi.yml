@@ -90,42 +90,6 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    InvalidParameterException:
-      type: object
-      properties:
-        message:
-          type: string
-    CreateEventDataStoreRequest:
-      type: object
-      required:
-      - Name
-      properties:
-        Name:
-          type: string
-          description: The name of the event data store.
-        RetentionPeriod:
-          type: integer
-          description: Retention period in days.
-        MultiRegionEnabled:
-          type: boolean
-    ListEventDataStoresResponse:
-      type: object
-      properties:
-        EventDataStores:
-          type: array
-          items:
-            type: object
-            properties:
-              EventDataStoreArn:
-                type: string
-              Name:
-                type: string
-              Status:
-                type: string
-              RetentionPeriod:
-                type: integer
-        NextToken:
-          type: string
     CreateEventDataStoreResponse:
       type: object
       properties:
@@ -144,6 +108,42 @@ components:
       type: object
       properties:
         message:
+          type: string
+    CreateEventDataStoreRequest:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          type: string
+          description: The name of the event data store.
+        RetentionPeriod:
+          type: integer
+          description: Retention period in days.
+        MultiRegionEnabled:
+          type: boolean
+    InvalidParameterException:
+      type: object
+      properties:
+        message:
+          type: string
+    ListEventDataStoresResponse:
+      type: object
+      properties:
+        EventDataStores:
+          type: array
+          items:
+            type: object
+            properties:
+              EventDataStoreArn:
+                type: string
+              Name:
+                type: string
+              Status:
+                type: string
+              RetentionPeriod:
+                type: integer
+        NextToken:
           type: string
 externalDocs:
   description: Amazon CloudTrail API Reference

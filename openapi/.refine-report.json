@@ -1,9 +1,7 @@
 {
   "provider": "amazon-cloudtrail",
   "sources": [
-    "amazon-cloudtrail-event-data-stores-api-openapi.yml",
-    "amazon-cloudtrail-events-api-openapi.yml",
-    "amazon-cloudtrail-trails-api-openapi.yml"
+    "_original/amazon-cloudtrail-openapi.yml"
   ],
   "outputs": [
     "amazon-cloudtrail-event-data-stores-api-openapi.yml",
@@ -14,7 +12,13 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-cloudtrail-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-cloudtrail-event-data-stores-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-cloudtrail-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-cloudtrail-trails-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

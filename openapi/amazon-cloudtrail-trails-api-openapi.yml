@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Amazon CloudTrail Event Data Stores Trails API
+  title: Amazon CloudTrail Trails API
   description: AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.
   version: '2013-11-01'
   contact:
@@ -136,6 +136,11 @@ components:
       properties:
         message:
           type: string
+    InvalidTrailNameException:
+      type: object
+      properties:
+        message:
+          type: string
     DescribeTrailsResponse:
       type: object
       properties:
@@ -171,21 +176,6 @@ components:
           type: boolean
         LogFileValidationEnabled:
           type: boolean
-    TrailNotFoundException:
-      type: object
-      properties:
-        message:
-          type: string
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
-    InvalidTrailNameException:
-      type: object
-      properties:
-        message:
-          type: string
     CreateTrailRequest:
       type: object
       required:
@@ -213,6 +203,16 @@ components:
         CloudWatchLogsRoleArn:
           type: string
           description: The role ARN for CloudWatch Logs delivery.
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    TrailNotFoundException:
+      type: object
+      properties:
+        message:
+          type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
