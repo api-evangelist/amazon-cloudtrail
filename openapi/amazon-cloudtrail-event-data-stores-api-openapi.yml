@@ -90,6 +90,11 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
     CreateEventDataStoreResponse:
       type: object
       properties:
@@ -104,29 +109,6 @@ components:
         CreatedTimestamp:
           type: string
           format: date-time
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
-    CreateEventDataStoreRequest:
-      type: object
-      required:
-      - Name
-      properties:
-        Name:
-          type: string
-          description: The name of the event data store.
-        RetentionPeriod:
-          type: integer
-          description: Retention period in days.
-        MultiRegionEnabled:
-          type: boolean
-    InvalidParameterException:
-      type: object
-      properties:
-        message:
-          type: string
     ListEventDataStoresResponse:
       type: object
       properties:
@@ -145,6 +127,24 @@ components:
                 type: integer
         NextToken:
           type: string
+    InvalidParameterException:
+      type: object
+      properties:
+        message:
+          type: string
+    CreateEventDataStoreRequest:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          type: string
+          description: The name of the event data store.
+        RetentionPeriod:
+          type: integer
+          description: Retention period in days.
+        MultiRegionEnabled:
+          type: boolean
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/

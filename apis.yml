@@ -246,5 +246,5 @@ tags:
   - Compliance
   - Governance
   - Security
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product

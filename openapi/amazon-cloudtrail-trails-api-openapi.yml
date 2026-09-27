@@ -131,12 +131,20 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    TrailAlreadyExistsException:
+    CreateTrailResponse:
       type: object
       properties:
-        message:
+        Name:
           type: string
-    InvalidTrailNameException:
+        S3BucketName:
+          type: string
+        TrailARN:
+          type: string
+        IsMultiRegionTrail:
+          type: boolean
+        LogFileValidationEnabled:
+          type: boolean
+    OperationNotPermittedException:
       type: object
       properties:
         message:
@@ -163,19 +171,11 @@ components:
                 type: boolean
               HasCustomEventSelectors:
                 type: boolean
-    CreateTrailResponse:
+    TrailNotFoundException:
       type: object
       properties:
-        Name:
+        message:
           type: string
-        S3BucketName:
-          type: string
-        TrailARN:
-          type: string
-        IsMultiRegionTrail:
-          type: boolean
-        LogFileValidationEnabled:
-          type: boolean
     CreateTrailRequest:
       type: object
       required:
@@ -203,12 +203,12 @@ components:
         CloudWatchLogsRoleArn:
           type: string
           description: The role ARN for CloudWatch Logs delivery.
-    OperationNotPermittedException:
+    TrailAlreadyExistsException:
       type: object
       properties:
         message:
           type: string
-    TrailNotFoundException:
+    InvalidTrailNameException:
       type: object
       properties:
         message:

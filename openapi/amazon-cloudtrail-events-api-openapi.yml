@@ -52,37 +52,12 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    LookupEventsResponse:
-      type: object
-      properties:
-        Events:
-          type: array
-          items:
-            type: object
-            properties:
-              EventId:
-                type: string
-              EventName:
-                type: string
-              EventTime:
-                type: string
-                format: date-time
-              EventSource:
-                type: string
-              Username:
-                type: string
-              CloudTrailEvent:
-                type: string
-              ReadOnly:
-                type: string
-        NextToken:
-          type: string
-    OperationNotPermittedException:
+    InvalidLookupAttributesException:
       type: object
       properties:
         message:
           type: string
-    InvalidLookupAttributesException:
+    OperationNotPermittedException:
       type: object
       properties:
         message:
@@ -116,6 +91,31 @@ components:
           format: date-time
         MaxResults:
           type: integer
+        NextToken:
+          type: string
+    LookupEventsResponse:
+      type: object
+      properties:
+        Events:
+          type: array
+          items:
+            type: object
+            properties:
+              EventId:
+                type: string
+              EventName:
+                type: string
+              EventTime:
+                type: string
+                format: date-time
+              EventSource:
+                type: string
+              Username:
+                type: string
+              CloudTrailEvent:
+                type: string
+              ReadOnly:
+                type: string
         NextToken:
           type: string
 externalDocs:
