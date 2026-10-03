@@ -109,24 +109,6 @@ components:
         CreatedTimestamp:
           type: string
           format: date-time
-    ListEventDataStoresResponse:
-      type: object
-      properties:
-        EventDataStores:
-          type: array
-          items:
-            type: object
-            properties:
-              EventDataStoreArn:
-                type: string
-              Name:
-                type: string
-              Status:
-                type: string
-              RetentionPeriod:
-                type: integer
-        NextToken:
-          type: string
     InvalidParameterException:
       type: object
       properties:
@@ -145,6 +127,24 @@ components:
           description: Retention period in days.
         MultiRegionEnabled:
           type: boolean
+    ListEventDataStoresResponse:
+      type: object
+      properties:
+        EventDataStores:
+          type: array
+          items:
+            type: object
+            properties:
+              EventDataStoreArn:
+                type: string
+              Name:
+                type: string
+              Status:
+                type: string
+              RetentionPeriod:
+                type: integer
+        NextToken:
+          type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/
