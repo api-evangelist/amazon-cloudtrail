@@ -52,16 +52,6 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    InvalidLookupAttributesException:
-      type: object
-      properties:
-        message:
-          type: string
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
     LookupEventsResponse:
       type: object
       properties:
@@ -86,6 +76,16 @@ components:
               ReadOnly:
                 type: string
         NextToken:
+          type: string
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    InvalidLookupAttributesException:
+      type: object
+      properties:
+        message:
           type: string
     LookupEventsRequest:
       type: object

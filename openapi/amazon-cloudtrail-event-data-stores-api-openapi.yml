@@ -90,11 +90,37 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    OperationNotPermittedException:
+    ListEventDataStoresResponse:
       type: object
       properties:
-        message:
+        EventDataStores:
+          type: array
+          items:
+            type: object
+            properties:
+              EventDataStoreArn:
+                type: string
+              Name:
+                type: string
+              Status:
+                type: string
+              RetentionPeriod:
+                type: integer
+        NextToken:
           type: string
+    CreateEventDataStoreRequest:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          type: string
+          description: The name of the event data store.
+        RetentionPeriod:
+          type: integer
+          description: Retention period in days.
+        MultiRegionEnabled:
+          type: boolean
     CreateEventDataStoreResponse:
       type: object
       properties:
@@ -114,36 +140,10 @@ components:
       properties:
         message:
           type: string
-    CreateEventDataStoreRequest:
-      type: object
-      required:
-      - Name
-      properties:
-        Name:
-          type: string
-          description: The name of the event data store.
-        RetentionPeriod:
-          type: integer
-          description: Retention period in days.
-        MultiRegionEnabled:
-          type: boolean
-    ListEventDataStoresResponse:
+    OperationNotPermittedException:
       type: object
       properties:
-        EventDataStores:
-          type: array
-          items:
-            type: object
-            properties:
-              EventDataStoreArn:
-                type: string
-              Name:
-                type: string
-              Status:
-                type: string
-              RetentionPeriod:
-                type: integer
-        NextToken:
+        message:
           type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
