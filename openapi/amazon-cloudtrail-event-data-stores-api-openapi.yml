@@ -90,6 +90,16 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
+    OperationNotPermittedException:
+      type: object
+      properties:
+        message:
+          type: string
+    InvalidParameterException:
+      type: object
+      properties:
+        message:
+          type: string
     ListEventDataStoresResponse:
       type: object
       properties:
@@ -135,16 +145,6 @@ components:
         CreatedTimestamp:
           type: string
           format: date-time
-    InvalidParameterException:
-      type: object
-      properties:
-        message:
-          type: string
-    OperationNotPermittedException:
-      type: object
-      properties:
-        message:
-          type: string
 externalDocs:
   description: Amazon CloudTrail API Reference
   url: https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/

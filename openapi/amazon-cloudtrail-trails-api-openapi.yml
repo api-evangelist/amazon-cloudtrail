@@ -131,17 +131,39 @@ paths:
                 $ref: '#/components/schemas/OperationNotPermittedException'
 components:
   schemas:
-    InvalidTrailNameException:
-      type: object
-      properties:
-        message:
-          type: string
     TrailAlreadyExistsException:
       type: object
       properties:
         message:
           type: string
-    TrailNotFoundException:
+    DescribeTrailsResponse:
+      type: object
+      properties:
+        trailList:
+          type: array
+          items:
+            type: object
+            properties:
+              Name:
+                type: string
+              S3BucketName:
+                type: string
+              TrailARN:
+                type: string
+              HomeRegion:
+                type: string
+              IsMultiRegionTrail:
+                type: boolean
+              LogFileValidationEnabled:
+                type: boolean
+              HasCustomEventSelectors:
+                type: boolean
+    InvalidTrailNameException:
+      type: object
+      properties:
+        message:
+          type: string
+    OperationNotPermittedException:
       type: object
       properties:
         message:
@@ -173,29 +195,7 @@ components:
         CloudWatchLogsRoleArn:
           type: string
           description: The role ARN for CloudWatch Logs delivery.
-    DescribeTrailsResponse:
-      type: object
-      properties:
-        trailList:
-          type: array
-          items:
-            type: object
-            properties:
-              Name:
-                type: string
-              S3BucketName:
-                type: string
-              TrailARN:
-                type: string
-              HomeRegion:
-                type: string
-              IsMultiRegionTrail:
-                type: boolean
-              LogFileValidationEnabled:
-                type: boolean
-              HasCustomEventSelectors:
-                type: boolean
-    OperationNotPermittedException:
+    TrailNotFoundException:
       type: object
       properties:
         message:
