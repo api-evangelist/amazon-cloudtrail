@@ -139,6 +139,8 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-cloudtrail-context.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-cloudtrail/overview
   - type: Overlay
     url: overlays/amazon-cloudtrail-openapi-overlay.yaml
   - type: AgenticAccess
