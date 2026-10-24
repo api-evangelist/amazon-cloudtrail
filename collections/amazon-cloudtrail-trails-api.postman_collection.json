@@ -1,39 +1,237 @@
 {
+  "info": {
+    "_postman_id": "b4245676-63f6-4a7a-a341-27b16a69b658",
+    "name": "Amazon CloudTrail Trails API",
+    "description": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.\n\nContact Support:\n Name: Amazon Web Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:46:42.000Z",
+    "updatedAt": "2026-10-21T20:46:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b4245676-63f6-4a7a-a341-27b16a69b658"
+  },
   "item": [
     {
-      "id": "fea48346-af3f-4ae8-b6ff-f67643c11c63",
-      "name": "Trails",
-      "description": {
-        "content": "Operations for creating and managing CloudTrail trails",
-        "type": "text/plain"
-      },
+      "name": "trails",
       "item": [
         {
-          "id": "4f2fae43-a943-4555-8b98-3002d182eda8",
-          "name": "Amazon CloudTrail Create a trail",
-          "request": {
-            "name": "Amazon CloudTrail Create a trail",
-            "description": {
-              "content": "Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "trails"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
+          "name": "{trailName}",
+          "item": [
+            {
+              "name": "Amazon CloudTrail Delete a trail",
+              "id": "e1e8c2fc-7255-4c82-b61c-9498d0f1a4b3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/trails/:trailName",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails",
+                    ":trailName"
+                  ],
+                  "variable": [
+                    {
+                      "id": "74464433-eee7-4344-bdfa-edcee97acff8",
+                      "key": "trailName",
+                      "value": "<string>",
+                      "description": "(Required) The name or ARN of the trail."
+                    }
+                  ]
+                },
+                "description": "Deletes a trail. This operation must be called from the region in which the trail was created."
+              },
+              "response": [
                 {
-                  "description": "AWS Region",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
+                  "id": "833013b5-271d-4540-9be0-4973b85ea60e",
+                  "name": "Trail deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/trails/:trailName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trails",
+                        ":trailName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trailName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-21T20:46:42.000Z",
+                  "updatedAt": "2026-10-21T20:46:42.000Z",
+                  "uid": "35240-833013b5-271d-4540-9be0-4973b85ea60e"
+                },
+                {
+                  "id": "2d7a6607-066d-40d4-81cb-c17298cc4dc8",
+                  "name": "Bad request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trails/:trailName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trails",
+                        ":trailName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trailName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"message\": \"<string>\"\n}",
+                  "createdAt": "2026-10-21T20:46:42.000Z",
+                  "updatedAt": "2026-10-21T20:46:42.000Z",
+                  "uid": "35240-2d7a6607-066d-40d4-81cb-c17298cc4dc8"
+                },
+                {
+                  "id": "6e6103db-7656-4392-82d9-666db02c84ae",
+                  "name": "Trail not found",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trails/:trailName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trails",
+                        ":trailName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trailName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"message\": \"<string>\"\n}",
+                  "createdAt": "2026-10-21T20:46:42.000Z",
+                  "updatedAt": "2026-10-21T20:46:42.000Z",
+                  "uid": "35240-6e6103db-7656-4392-82d9-666db02c84ae"
+                },
+                {
+                  "id": "a87da895-5d40-4ee5-88e0-76ab1220598e",
+                  "name": "Internal server error",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/trails/:trailName",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "trails",
+                        ":trailName"
+                      ],
+                      "variable": [
+                        {
+                          "key": "trailName"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"message\": \"<string>\"\n}",
+                  "createdAt": "2026-10-21T20:46:42.000Z",
+                  "updatedAt": "2026-10-21T20:46:42.000Z",
+                  "uid": "35240-a87da895-5d40-4ee5-88e0-76ab1220598e"
                 }
-              ]
-            },
+              ],
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-e1e8c2fc-7255-4c82-b61c-9498d0f1a4b3"
+            }
+          ],
+          "id": "c6179154-f004-411f-8b9e-8e301f3ec730",
+          "createdAt": "2026-10-21T20:46:42.000Z",
+          "updatedAt": "2026-10-21T20:46:42.000Z",
+          "uid": "35240-c6179154-f004-411f-8b9e-8e301f3ec730"
+        },
+        {
+          "name": "Amazon CloudTrail Create a trail",
+          "id": "0c20fd51-8548-4290-a7e8-7799cd6a4069",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
@@ -44,723 +242,447 @@
                 "value": "application/json"
               }
             ],
-            "method": "POST",
-            "auth": null,
             "body": {
               "mode": "raw",
               "raw": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"S3KeyPrefix\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"EnableLogFileValidation\": \"<boolean>\",\n  \"CloudWatchLogsLogGroupArn\": \"<string>\",\n  \"CloudWatchLogsRoleArn\": \"<string>\"\n}",
               "options": {
                 "raw": {
+                  "headerFamily": "json",
                   "language": "json"
                 }
               }
-            }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/trails",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "trails"
+              ]
+            },
+            "description": "Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket."
           },
           "response": [
             {
-              "id": "5b303153-7eb2-425d-a11c-813683b3b04b",
+              "id": "6af9157f-edae-4b6a-aa91-dab4a5b60261",
               "name": "Trail created successfully",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"S3KeyPrefix\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"EnableLogFileValidation\": \"<boolean>\",\n  \"CloudWatchLogsLogGroupArn\": \"<string>\",\n  \"CloudWatchLogsRoleArn\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trails",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails"
+                  ]
                 }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"Name\": \"string\",\n  \"S3BucketName\": \"string\",\n  \"TrailARN\": \"string\",\n  \"IsMultiRegionTrail\": true,\n  \"LogFileValidationEnabled\": false\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"TrailARN\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"LogFileValidationEnabled\": \"<boolean>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-6af9157f-edae-4b6a-aa91-dab4a5b60261"
             },
             {
-              "id": "97faf549-9f90-413e-b390-20a8fd05280e",
+              "id": "e55f8e06-00a4-4a77-b993-d58ec51c28ca",
               "name": "Bad request",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"S3KeyPrefix\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"EnableLogFileValidation\": \"<boolean>\",\n  \"CloudWatchLogsLogGroupArn\": \"<string>\",\n  \"CloudWatchLogsRoleArn\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trails",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails"
+                  ]
                 }
               },
               "status": "Bad Request",
               "code": 400,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"message\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"message\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-e55f8e06-00a4-4a77-b993-d58ec51c28ca"
             },
             {
-              "id": "d9788256-ba25-4160-9c8b-37751a7a367d",
+              "id": "649f256d-2048-45d5-8246-29d5f259258f",
               "name": "Trail already exists",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"S3KeyPrefix\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"EnableLogFileValidation\": \"<boolean>\",\n  \"CloudWatchLogsLogGroupArn\": \"<string>\",\n  \"CloudWatchLogsRoleArn\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trails",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails"
+                  ]
                 }
               },
               "status": "Conflict",
               "code": 409,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"message\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"message\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-649f256d-2048-45d5-8246-29d5f259258f"
             },
             {
-              "id": "d2f9507b-ef9c-4836-a26a-03c6f0e40530",
+              "id": "86757c28-2c07-4e98-94db-faa78d277098",
               "name": "Internal server error",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "POST",
                 "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "POST",
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"Name\": \"<string>\",\n  \"S3BucketName\": \"<string>\",\n  \"S3KeyPrefix\": \"<string>\",\n  \"IsMultiRegionTrail\": \"<boolean>\",\n  \"EnableLogFileValidation\": \"<boolean>\",\n  \"CloudWatchLogsLogGroupArn\": \"<string>\",\n  \"CloudWatchLogsRoleArn\": \"<string>\"\n}",
                   "options": {
                     "raw": {
+                      "headerFamily": "json",
                       "language": "json"
                     }
                   }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/trails",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails"
+                  ]
                 }
               },
               "status": "Internal Server Error",
               "code": 500,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"message\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"message\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-86757c28-2c07-4e98-94db-faa78d277098"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-21T20:46:42.000Z",
+          "updatedAt": "2026-10-21T20:46:42.000Z",
+          "uid": "35240-0c20fd51-8548-4290-a7e8-7799cd6a4069"
         },
         {
-          "id": "3512438a-d28b-419b-8bc0-071031bb4969",
           "name": "Amazon CloudTrail Describe trails",
+          "id": "ab7f847e-310e-48e6-8564-b5f4f7f5337f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "name": "Amazon CloudTrail Describe trails",
-            "description": {
-              "content": "Retrieves settings for one or more trails associated with the current region for your account.",
-              "type": "text/plain"
-            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
             "url": {
+              "raw": "{{baseUrl}}/trails?trailNameList=<string>&trailNameList=<string>&includeShadowTrails=<boolean>",
+              "host": [
+                "{{baseUrl}}"
+              ],
               "path": [
                 "trails"
               ],
-              "host": [
-                "{{baseUrl}}"
-              ],
               "query": [
                 {
-                  "disabled": false,
+                  "description": "List of trail names or ARNs.",
                   "key": "trailNameList",
-                  "value": "<string>",
-                  "description": "List of trail names or ARNs."
+                  "value": "<string>"
                 },
                 {
-                  "disabled": false,
+                  "description": "List of trail names or ARNs.",
                   "key": "trailNameList",
-                  "value": "<string>",
-                  "description": "List of trail names or ARNs."
+                  "value": "<string>"
                 },
                 {
-                  "disabled": false,
+                  "description": "Whether to include shadow trails.",
                   "key": "includeShadowTrails",
-                  "value": "<boolean>",
-                  "description": "Whether to include shadow trails."
-                }
-              ],
-              "variable": [
-                {
-                  "description": "AWS Region",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
+                  "value": "<boolean>"
                 }
               ]
             },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
+            "description": "Retrieves settings for one or more trails associated with the current region for your account."
           },
           "response": [
             {
-              "id": "cbc76914-b70d-48e2-9c01-1d7da60f9ece",
+              "id": "7424aad2-31cc-498d-8458-08eb8dd202fe",
               "name": "Successful response",
               "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "trailNameList",
-                      "value": "<string>"
-                    },
-                    {
-                      "key": "trailNameList",
-                      "value": "<string>"
-                    },
-                    {
-                      "key": "includeShadowTrails",
-                      "value": "<boolean>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
+                "method": "GET",
                 "header": [
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "url": {
+                  "raw": "{{baseUrl}}/trails?trailNameList=<string>&includeShadowTrails=<boolean>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "trails"
+                  ],
+                  "query": [
+                    {
+                      "description": "List of trail names or ARNs.",
+                      "key": "trailNameList",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Whether to include shadow trails.",
+                      "key": "includeShadowTrails",
+                      "value": "<boolean>"
+                    }
+                  ]
+                }
               },
               "status": "OK",
               "code": 200,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"trailList\": [\n    {\n      \"Name\": \"string\",\n      \"S3BucketName\": \"string\",\n      \"TrailARN\": \"string\",\n      \"HomeRegion\": \"string\",\n      \"IsMultiRegionTrail\": true,\n      \"LogFileValidationEnabled\": true,\n      \"HasCustomEventSelectors\": false\n    },\n    {\n      \"Name\": \"string\",\n      \"S3BucketName\": \"string\",\n      \"TrailARN\": \"string\",\n      \"HomeRegion\": \"string\",\n      \"IsMultiRegionTrail\": true,\n      \"LogFileValidationEnabled\": false,\n      \"HasCustomEventSelectors\": true\n    }\n  ]\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"trailList\": [\n    {\n      \"Name\": \"<string>\",\n      \"S3BucketName\": \"<string>\",\n      \"TrailARN\": \"<string>\",\n      \"HomeRegion\": \"<string>\",\n      \"IsMultiRegionTrail\": \"<boolean>\",\n      \"LogFileValidationEnabled\": \"<boolean>\",\n      \"HasCustomEventSelectors\": \"<boolean>\"\n    },\n    {\n      \"Name\": \"<string>\",\n      \"S3BucketName\": \"<string>\",\n      \"TrailARN\": \"<string>\",\n      \"HomeRegion\": \"<string>\",\n      \"IsMultiRegionTrail\": \"<boolean>\",\n      \"LogFileValidationEnabled\": \"<boolean>\",\n      \"HasCustomEventSelectors\": \"<boolean>\"\n    }\n  ]\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-7424aad2-31cc-498d-8458-08eb8dd202fe"
             },
             {
-              "id": "3a21aa08-b3c3-4e60-b968-b7aed2972d2d",
+              "id": "2941b1e2-06fd-4ded-ba2b-a8b10e44135f",
               "name": "Bad request",
               "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
                 "url": {
+                  "raw": "{{baseUrl}}/trails?trailNameList=<string>&includeShadowTrails=<boolean>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
                   "path": [
                     "trails"
                   ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
                   "query": [
                     {
+                      "description": "List of trail names or ARNs.",
                       "key": "trailNameList",
                       "value": "<string>"
                     },
                     {
-                      "key": "trailNameList",
-                      "value": "<string>"
-                    },
-                    {
+                      "description": "Whether to include shadow trails.",
                       "key": "includeShadowTrails",
                       "value": "<boolean>"
                     }
-                  ],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
                   ]
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
+                }
               },
               "status": "Bad Request",
               "code": 400,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"message\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"message\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-2941b1e2-06fd-4ded-ba2b-a8b10e44135f"
             },
             {
-              "id": "8cac86d1-ebe8-44b3-9e46-c64d10d7ca27",
+              "id": "d57d4293-81e6-47cd-8968-ef3f466c6d48",
               "name": "Internal server error",
               "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
                 "url": {
+                  "raw": "{{baseUrl}}/trails?trailNameList=<string>&includeShadowTrails=<boolean>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
                   "path": [
                     "trails"
                   ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
                   "query": [
                     {
+                      "description": "List of trail names or ARNs.",
                       "key": "trailNameList",
                       "value": "<string>"
                     },
                     {
-                      "key": "trailNameList",
-                      "value": "<string>"
-                    },
-                    {
+                      "description": "Whether to include shadow trails.",
                       "key": "includeShadowTrails",
                       "value": "<boolean>"
                     }
-                  ],
-                  "variable": [
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
                   ]
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
+                }
               },
               "status": "Internal Server Error",
               "code": 500,
+              "_postman_previewlanguage": "json",
               "header": [
                 {
                   "key": "Content-Type",
                   "value": "application/json"
                 }
               ],
-              "body": "{\n  \"message\": \"string\"\n}",
               "cookie": [],
-              "_postman_previewlanguage": "json"
+              "responseTime": null,
+              "body": "{\n  \"message\": \"<string>\"\n}",
+              "createdAt": "2026-10-21T20:46:42.000Z",
+              "updatedAt": "2026-10-21T20:46:42.000Z",
+              "uid": "35240-d57d4293-81e6-47cd-8968-ef3f466c6d48"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "71273ae6-d5c6-41a9-b9b0-9f9baab0f3b4",
-          "name": "Amazon CloudTrail Delete a trail",
-          "request": {
-            "name": "Amazon CloudTrail Delete a trail",
-            "description": {
-              "content": "Deletes a trail. This operation must be called from the region in which the trail was created.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "trails",
-                ":trailName"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "trailName",
-                  "description": "(Required) The name or ARN of the trail."
-                },
-                {
-                  "description": "AWS Region",
-                  "type": "any",
-                  "value": "{{region}}",
-                  "key": "region"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "727c2dc9-f24d-4e2b-a06d-c1e02b69e4c8",
-              "name": "Trail deleted",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails",
-                    ":trailName"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "trailName",
-                      "description": "(Required) The name or ARN of the trail."
-                    },
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "text/plain"
-                }
-              ],
-              "body": "",
-              "cookie": [],
-              "_postman_previewlanguage": "text"
-            },
-            {
-              "id": "069a7edd-d930-4dcb-ab85-f460059dfcc9",
-              "name": "Bad request",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails",
-                    ":trailName"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "trailName",
-                      "description": "(Required) The name or ARN of the trail."
-                    },
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "Bad Request",
-              "code": 400,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "7d29c9a6-1801-4ec6-8be6-8b1556db12b4",
-              "name": "Trail not found",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails",
-                    ":trailName"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "trailName",
-                      "description": "(Required) The name or ARN of the trail."
-                    },
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "Not Found",
-              "code": 404,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "dd700d01-b3b2-4224-be65-8a16cbd096d0",
-              "name": "Internal server error",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "trails",
-                    ":trailName"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "trailName",
-                      "description": "(Required) The name or ARN of the trail."
-                    },
-                    {
-                      "description": "AWS Region",
-                      "type": "any",
-                      "value": "{{region}}",
-                      "key": "region"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "createdAt": "2026-10-21T20:46:42.000Z",
+          "updatedAt": "2026-10-21T20:46:42.000Z",
+          "uid": "35240-ab7f847e-310e-48e6-8564-b5f4f7f5337f"
         }
       ],
-      "event": []
+      "id": "b761ecef-b435-407b-bf57-fd59d0ea3c01",
+      "createdAt": "2026-10-21T20:46:42.000Z",
+      "updatedAt": "2026-10-21T20:46:42.000Z",
+      "uid": "35240-b761ecef-b435-407b-bf57-fd59d0ea3c01"
     }
   ],
-  "event": [],
   "variable": [
     {
-      "description": {
-        "content": "AWS Region",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "us-east-1",
-      "key": "region"
+      "key": "region",
+      "value": "us-east-1"
     },
     {
-      "type": "string",
-      "value": "https://cloudtrail.{{region}}.amazonaws.com",
-      "key": "baseUrl"
+      "key": "baseUrl",
+      "value": "https://cloudtrail.{{region}}.amazonaws.com"
     }
-  ],
-  "info": {
-    "_postman_id": "125935d2-d994-4500-aaa2-c87e023540c1",
-    "name": "Amazon CloudTrail Event Data Stores Trails API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure.\n\nContact Support:\n Name: Amazon Web Services",
-      "type": "text/plain"
-    }
-  }
+  ]
 }
