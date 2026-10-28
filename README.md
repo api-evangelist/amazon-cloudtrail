@@ -1,4 +1,4 @@
-# Amazon CloudTrail (amazon-cloudtrail)
+# Amazon CloudTrail
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,113 +66,188 @@
 
 AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account by tracking user activity and API usage across AWS environments, hybrid setups, and multicloud deployments with immutable audit trails.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-cloudtrail/refs/heads/main/apis.yml)
+**Areas:** AWS · CloudTrail · Audit · Compliance · Governance · Security
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon CloudTrail on APIs.io
 
-## Tags:
+Everything profiled for Amazon CloudTrail is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-cloudtrail/](https://apis.io/providers/amazon-cloudtrail/)** — or go straight to one of the APIs or properties below.
 
- - AWS, CloudTrail, Audit, Compliance, Governance, Security
+### APIs (10)
 
-## Timestamps
+- [Amazon CloudTrail Event Data Stores API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-event-data-stores-api/) — Operations for managing CloudTrail Lake event data stores
+- [Amazon CloudTrail Events API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-events-api/) — Operations for looking up and querying events
+- [Amazon CloudTrail Trails API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-trails-api/) — Operations for creating and managing CloudTrail trails
+- [Amazon CloudTrail Cloudtrail Channel API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-channel-api/) — The Cloudtrail Channel API from Amazon CloudTrail — 5 operation(s) for cloudtrail channel.
+- [Amazon CloudTrail Cloudtrail Dashboard API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-dashboard-api/) — The Cloudtrail Dashboard API from Amazon CloudTrail — 5 operation(s) for cloudtrail dashboard.
+- [Amazon CloudTrail Cloudtrail Import API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-import-api/) — The Cloudtrail Import API from Amazon CloudTrail — 4 operation(s) for cloudtrail import.
+- [Amazon CloudTrail Cloudtrail Operations API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-operations-api/) — The Cloudtrail Operations API from Amazon CloudTrail — 22 operation(s) for cloudtrail operations.
+- [Amazon CloudTrail Cloudtrail Query API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-query-api/) — The Cloudtrail Query API from Amazon CloudTrail — 5 operation(s) for cloudtrail query.
+- [Amazon CloudTrail Cloudtrail Resource Policy API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-resource-policy-api/) — The Cloudtrail Resource Policy API from Amazon CloudTrail — 3 operation(s) for cloudtrail resource policy.
+- [Amazon CloudTrail Cloudtrail Tag API](https://apis.io/apis/amazon-cloudtrail/amazon-cloudtrail-tag-api/) — The Cloudtrail Tag API from Amazon CloudTrail — 3 operation(s) for cloudtrail tag.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon CloudTrail API
-API for creating and managing CloudTrail trails, event data stores, and channels for capturing AWS API activity and storing audit logs.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/cloudtrail/](https://aws.amazon.com/cloudtrail/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [awslabs.cloudtrail-mcp-server](https://apis.io/servers/amazon-cloudtrail/awslabs-cloudtrail-mcp-server/)
 
- - AWS, CloudTrail, Audit, Compliance, Security
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/)
-- [OpenAPI](openapi/amazon-cloudtrail-openapi.yml)
-- [APIReference](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/)
+- [Amazon Cloudtrail Agentic Access](https://apis.io/agentic-access/amazon-cloudtrail/amazon-cloudtrail-agentic-access/)
 
-## Common Properties
+#### JSON Schema (9)
 
-- [Portal](https://aws.amazon.com/)
+The data models the API reads and writes.
+
+- [Amazon CloudTrail Event](https://apis.io/schemas/amazon-cloudtrail/amazon-cloudtrail-event/)
+- [CreateEventDataStoreRequest](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-create-event-data-store-request/)
+- [CreateEventDataStoreResponse](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-create-event-data-store-response/)
+- [CreateTrailRequest](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-create-trail-request/)
+- [CreateTrailResponse](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-create-trail-response/)
+- [DescribeTrailsResponse](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-describe-trails-response/)
+- [ListEventDataStoresResponse](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-list-event-data-stores-response/)
+- [LookupEventsRequest](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-lookup-events-request/)
+- [LookupEventsResponse](https://apis.io/schemas/amazon-cloudtrail/cloudtrail-lookup-events-response/)
+
+#### JSON Structure (8)
+
+Data models expressed in JSON Structure.
+
+- [Cloudtrail Create Event Data Store Request Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-create-event-data-store-request-structure/)
+- [Cloudtrail Create Event Data Store Response Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-create-event-data-store-response-structure/)
+- [Cloudtrail Create Trail Request Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-create-trail-request-structure/)
+- [Cloudtrail Create Trail Response Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-create-trail-response-structure/)
+- [Cloudtrail Describe Trails Response Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-describe-trails-response-structure/)
+- [Cloudtrail List Event Data Stores Response Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-list-event-data-stores-response-structure/)
+- [Cloudtrail Lookup Events Request Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-lookup-events-request-structure/)
+- [Cloudtrail Lookup Events Response Structure](https://apis.io/json-structure/amazon-cloudtrail/cloudtrail-lookup-events-response-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Cloudtrail Context](https://apis.io/jsonld/amazon-cloudtrail/amazon-cloudtrail-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Cloudtrail Vocabulary](https://apis.io/vocabularies/amazon-cloudtrail/amazon-cloudtrail-vocabulary/)
+
+#### Examples (8)
+
+Example requests and responses.
+
+- [Cloudtrail Create Event Data Store Request Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-create-event-data-store-request-example/)
+- [Cloudtrail Create Event Data Store Response Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-create-event-data-store-response-example/)
+- [Cloudtrail Create Trail Request Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-create-trail-request-example/)
+- [Cloudtrail Create Trail Response Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-create-trail-response-example/)
+- [Cloudtrail Describe Trails Response Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-describe-trails-response-example/)
+- [Cloudtrail List Event Data Stores Response Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-list-event-data-stores-response-example/)
+- [Cloudtrail Lookup Events Request Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-lookup-events-request-example/)
+- [Cloudtrail Lookup Events Response Example](https://apis.io/examples/amazon-cloudtrail/cloudtrail-lookup-events-response-example/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Amazon CloudTrail Event Data Stores API](https://apis.io/collections/amazon-cloudtrail/open-amazon-cloudtrail-event-data-stores-api/)
+- [Amazon CloudTrail Event Data Stores Events API](https://apis.io/collections/amazon-cloudtrail/open-amazon-cloudtrail-events-api/)
+- [Amazon CloudTrail Event Data Stores Trails API](https://apis.io/collections/amazon-cloudtrail/open-amazon-cloudtrail-trails-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon Cloudtrail Openapi Overlay](https://apis.io/overlays/amazon-cloudtrail/amazon-cloudtrail-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon CloudTrail — jsonschema rules](https://apis.io/rules/amazon-cloudtrail/amazon-cloudtrail-jsonschema-spectral-rules/)
+- [Amazon CloudTrail API Rules](https://apis.io/rules/amazon-cloudtrail/amazon-cloudtrail-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Cloudtrail Domain Security](https://apis.io/security/amazon-cloudtrail/amazon-cloudtrail-domain-security/)
+- [Amazon Cloudtrail Trust Center](https://apis.io/security/amazon-cloudtrail/amazon-cloudtrail-trust-center/)
+- [Amazon Cloudtrail Vulnerability Disclosure](https://apis.io/security/amazon-cloudtrail/amazon-cloudtrail-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/cloudtrail/)
-- [SpectralRules](rules/amazon-cloudtrail-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-cloudtrail-vocabulary.yaml)
-- [NaftikoCapability](capabilities/audit-trail-management.yaml)
+- [Documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/)
+- [Sign up](https://signin.aws.amazon.com/signup?request_type=register)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Blog](https://aws.amazon.com/blogs/security/)
+- [Compliance](https://aws.amazon.com/compliance/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Event Aggregation | Consolidate activity events from AWS, external providers, on-premises, and SaaS into a unified audit trail. |
-| Immutable Audit Logs | Store audit-worthy events immutably to ensure tamper-proof compliance records. |
-| CloudTrail Insights | Detect unusual API activity patterns with anomaly detection on management and data events. |
-| SQL Query Support | Investigate issues using SQL queries or natural language with Amazon Athena integration. |
-| Multi-Region Trails | Create trails that capture events from all AWS regions in a single S3 bucket. |
+**Kin Score 56.1** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 62.0 |
+| Contract governance | 31.8 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 60.7 |
+| Access clarity | 60.5 |
 
-| Name | Description |
-|------|-------------|
-| Compliance Auditing | Demonstrate adherence to SOC, PCI DSS, and HIPAA regulations with audit logs. |
-| Security Monitoring | Record and monitor user and API activity for security incident detection. |
-| Operational Debugging | Investigate operational issues by querying historical API activity. |
-| Governance | Track who made changes to AWS resources and when for governance accountability. |
+**Agent readiness 22.2** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Amazon S3 | Store CloudTrail logs in S3 buckets with lifecycle management. |
-| Amazon Athena | Query CloudTrail logs using SQL via Athena integration. |
-| Amazon CloudWatch | Stream CloudTrail events to CloudWatch Logs for real-time monitoring. |
-| AWS Lambda | Trigger Lambda functions based on CloudTrail events for automated response. |
-| AWS Security Hub | Send CloudTrail findings to Security Hub for centralized security management. |
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-cloudtrail/](https://apis.io/providers/amazon-cloudtrail/).
 
-### OpenAPI
+## How this profile is made
 
-- [Amazon CloudTrail API](openapi/amazon-cloudtrail-openapi.yml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### JSON Schema
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon CloudTrail: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [CreateTrailRequest](json-schema/cloudtrail-create-trail-request-schema.json)
-- [CreateTrailResponse](json-schema/cloudtrail-create-trail-response-schema.json)
-- [DescribeTrailsResponse](json-schema/cloudtrail-describe-trails-response-schema.json)
-- [LookupEventsRequest](json-schema/cloudtrail-lookup-events-request-schema.json)
-- [LookupEventsResponse](json-schema/cloudtrail-lookup-events-response-schema.json)
+## Open an issue
 
-### JSON-LD
-
-- [Amazon CloudTrail Context](json-ld/amazon-cloudtrail-context.jsonld)
-
-## Capabilities
-
-### Shared Per-API Definitions
-
-- [Amazon CloudTrail](capabilities/shared/cloudtrail.yaml) — 7 operations
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Audit Trail Management](capabilities/audit-trail-management.yaml) | Amazon CloudTrail | 7 | Security Analyst |
-
-## Vocabulary
-
-- [Amazon CloudTrail Vocabulary](vocabulary/amazon-cloudtrail-vocabulary.yaml) — Unified taxonomy covering operations, workflows, and personas
-
-## Rules
-
-- [Amazon CloudTrail Spectral Rules](rules/amazon-cloudtrail-spectral-rules.yml) — 19 rules enforcing Amazon CloudTrail API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-cloudtrail/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
